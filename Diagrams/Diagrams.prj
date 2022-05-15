@@ -1,6 +1,6 @@
 format 224
 "Diagrams"
-  revision 3
+  revision 4
   modified_by 127 "dianas"
 
 
@@ -128,6 +128,12 @@ format 224
       explicit_switch_type ""
       mysql_decl ""
       
+      classrelation 128127 // <generalisation>
+	relation 128127 ---|>
+	  a public
+	    classrelation_ref 128127 // <generalisation>
+	  b parent class_ref 128127 // Korisnik
+      end
     end
 
     usecase 128127 "Rezervacija vozila"
@@ -246,6 +252,12 @@ format 224
 	  stereotype "extend"
 	  on usecase_ref 128127 // Rezervacija vozila
       end
+
+      simplerelation 136319
+	-_->
+	  stereotype "extend"
+	  on usecase_ref 128127 // Rezervacija vozila
+      end
     end
 
     usecase 128639 "Odabir lokacije"
@@ -329,7 +341,7 @@ format 224
       simplerelation 129023
 	-_->
 	  stereotype "include"
-	  on usecase_ref 129151 // Odabir Nacina Placanja
+	  on usecase_ref 129151 // Odabir nacina placanja
       end
     end
 
@@ -356,7 +368,7 @@ format 224
        end
     end
 
-    usecase 129151 "Odabir Nacina Placanja"
+    usecase 129151 "Odabir nacina placanja"
       
       usecasediagramsettings end
       
@@ -451,6 +463,17 @@ format 224
       
       activitydiagramsettings
        end
+      simplerelation 135935
+	-_->
+	  stereotype "extend"
+	  on usecase_ref 129919 // Prikaz liste vozila
+      end
+
+      simplerelation 138367
+	-_->
+	  stereotype "extend"
+	  on usecase_ref 138751 // Lista vozila za servisera
+      end
     end
 
     usecase 129663 "\"Chat\""
@@ -497,6 +520,11 @@ format 224
       
       activitydiagramsettings
        end
+      simplerelation 136959
+	-_->
+	  stereotype "extend"
+	  on usecase_ref 129919 // Prikaz liste vozila
+      end
     end
 
     usecase 129919 "Prikaz liste vozila"
@@ -599,6 +627,560 @@ format 224
       
       activitydiagramsettings
        end
+      simplerelation 136063
+	-_->
+	  stereotype "include"
+	  on usecase_ref 136959 // Stamapanje priznanica
+      end
+
+      simplerelation 136191
+	-_->
+	  stereotype "include"
+	  on usecase_ref 136831 // Komunikacija sa bankom
+      end
+    end
+
+    usecase 136831 "Komunikacija sa bankom"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 136959 "Stamapanje priznanica"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 137087 "Prikaz liste rezervacija vozila"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 137215 "Privremen prekid upotrebe vozila"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 136447
+	-_->
+	  stereotype "extend"
+	  on usecase_ref 128895 // Upotreba vozila
+      end
+    end
+
+    usecase 137343 "Prikaz liste korisnika"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 137471 "Prikaz podataka o korisniku"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 137599 "Upravljanje popustima"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 136831
+	-_->
+	  stereotype "extend"
+	  on usecase_ref 137727 // Odabri korisnika
+      end
+    end
+
+    usecase 137727 "Odabri korisnika"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 136575
+	-_->
+	  stereotype "extend"
+	  on usecase_ref 137343 // Prikaz liste korisnika
+      end
+
+      simplerelation 136703
+	-_->
+	  stereotype "include"
+	  on usecase_ref 137471 // Prikaz podataka o korisniku
+      end
+    end
+
+    usecase 137855 "Prikaz liste radnika"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 137215
+	-_->
+	  stereotype "include"
+	  on usecase_ref 138111 // Prikaz podataka o radniku
+      end
+
+      simplerelation 137343
+	-_->
+	  stereotype "extend"
+	  on usecase_ref 138239 // Odabir radnika
+      end
+    end
+
+    usecase 137983 "Kontrola pristupa profilu"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 137087
+	-_->
+	  stereotype "extend"
+	  on usecase_ref 137727 // Odabri korisnika
+      end
+    end
+
+    usecase 138111 "Prikaz podataka o radniku"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 138239 "Odabir radnika"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 137471
+	-_->
+	  stereotype "include"
+	  on usecase_ref 138111 // Prikaz podataka o radniku
+      end
+    end
+
+    usecase 138367 "Promena plate"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 137599
+	-_->
+	  stereotype "extend"
+	  on usecase_ref 138239 // Odabir radnika
+      end
+    end
+
+    usecase 138495 "Prikaz liste servisera"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 137727
+	-_->
+	  stereotype "include"
+	  on usecase_ref 138623 // Odabir servisera
+      end
+    end
+
+    usecase 138623 "Odabir servisera"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 138239
+	-_->
+	  stereotype "include"
+	  on usecase_ref 139135 // Prikaz podataka o serviseru
+      end
+    end
+
+    usecase 138751 "Lista vozila za servisera"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 137855
+	-_->
+	  stereotype "extend"
+	  on usecase_ref 138623 // Odabir servisera
+      end
+    end
+
+    usecase 138879 "Komunikacija sa serviserom"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 137983
+	-_->
+	  stereotype "extend"
+	  on usecase_ref 138623 // Odabir servisera
+      end
+    end
+
+    usecase 139007 "Isplata"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 138111
+	-_->
+	  stereotype "extend"
+	  on usecase_ref 138623 // Odabir servisera
+      end
+    end
+
+    usecase 139135 "Prikaz podataka o serviseru"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+    end
+
+    usecase 139263 "Odabir vozila (serviser)"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 138495
+	-_->
+	  stereotype "extend"
+	  on usecase_ref 138751 // Lista vozila za servisera
+      end
+
+      simplerelation 138623
+	-_->
+	  stereotype "include"
+	  on usecase_ref 129535 // Prikaz liste prijavljenih ostecenja
+      end
     end
   end
 end
