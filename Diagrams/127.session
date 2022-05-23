@@ -1,11 +1,10 @@
-window_sizes 2560 1410 450 2104 1262 96
+window_sizes 1920 1050 0 1914 902 96
 cleanlooks_style
 diagrams
   active  usecasediagram_ref 128127 // UseCaseDiagram
     2098 1236 110 A2 0 0
 end
 show_stereotypes
-selected usecasediagram_ref 128127 // UseCaseDiagram
 open
   usecaseview_ref 128127 // UseCase
 end
