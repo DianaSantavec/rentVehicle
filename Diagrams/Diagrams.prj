@@ -1,7 +1,7 @@
 format 224
 "Diagrams"
-  revision 3
-  modified_by 127 "dianas"
+  revision 4
+  modified_by 23 "vindo"
 
 
   
@@ -600,5 +600,192 @@ format 224
       activitydiagramsettings
        end
     end
+
+    activity 128023 "Aktivnosti mobilne aplikacije"
+      activitydiagram 128151 "Login/register flow"
+	activitydiagramsettings
+	 end
+	size A4
+      end
+
+      activityaction 128023 "Unos kredencijala i prijava na sistem"
+	opaque_action
+	flow 128535 "<flow>"
+	  on activityaction_ref 128407 // activity action Uspesna prijava
+	end
+
+	flow 128791 "<flow>"
+	  on activitynode_ref 128407 // decision
+	end
+      end
+
+      activitynode 128023 initial_node ""
+      end
+
+      activityaction 128151 "Ulazak u aplikaciju. Da li je korisnik ulogovan?"
+	opaque_action
+	flow 128023 "<flow>"
+	  on activitynode_ref 128151 // decision
+	end
+      end
+
+      activitynode 128151 decision ""
+	flow 128151 "Jeste"
+	  on activityaction_ref 128279 // activity action Prikaz pocetnog ekrana
+	end
+
+	flow 128407 "Nije"
+	  on activityaction_ref 128023 // activity action Unos kredencijala i prijava na sistem
+	end
+      end
+
+      activityaction 128279 "Prikaz pocetnog ekrana"
+	opaque_action
+	flow 128279 "<flow>"
+	  on activitynode_ref 128279 // activity_final
+	end
+      end
+
+      activitynode 128279 activity_final ""
+      end
+
+      activityaction 128407 "Uspesna prijava"
+	opaque_action
+      end
+
+      activitynode 128407 decision ""
+	flow 128663 "Neuspesna prijava / neispravni kredencijali"
+	  on activityaction_ref 128023 // activity action Unos kredencijala i prijava na sistem
+	end
+
+	flow 128919 "Uspesna prijava"
+	  on activityaction_ref 128279 // activity action Prikaz pocetnog ekrana
+	end
+      end
+
+      activitydiagram 128279 "Rezervacija vozila"
+	activitydiagramsettings draw_all_relations no
+	 end
+	size A4
+      end
+
+      activitynode 128535 initial_node ""
+	flow 129047 "<flow>"
+	  on activityaction_ref 128535 // activity action 
+	end
+      end
+
+      activityaction 128535 ""
+	opaque_action
+	flow 129175 "<flow>"
+	  on activitynode_ref 128663 // decision
+	end
+
+	flow 129559 "<flow>"
+	  on activityaction_ref 128919 // activity action Odabir vrste vozila i termina
+	end
+      end
+
+      activitynode 128663 decision ""
+	flow 129303 "Mapa"
+	  on activityaction_ref 128663 // activity action Prikaz mape sa lokacijom svih dostpunih vozila odabrane vrste
+	end
+
+	flow 129431 "Lista"
+	  on activityaction_ref 128791 // activity action Prikaz liste svih dostupnih vozila odabrane vrste
+	end
+      end
+
+      activityaction 128663 "Prikaz mape sa lokacijom svih dostpunih vozila odabrane vrste"
+	opaque_action
+	flow 130327 "<flow>"
+	  on activitynode_ref 128919 // merge
+	end
+      end
+
+      activityaction 128791 "Prikaz liste svih dostupnih vozila odabrane vrste"
+	opaque_action
+	flow 130455 "<flow>"
+	  on activitynode_ref 128919 // merge
+	end
+      end
+
+      activityaction 128919 "Odabir vrste vozila i termina"
+	opaque_action
+	flow 129687 "<flow>"
+	  on activityaction_ref 129047 // activity action Da li ima slobodnih vozila u odabranom terminu?
+	end
+      end
+
+      activityaction 129047 "Da li ima slobodnih vozila u odabranom terminu?"
+	opaque_action
+	flow 129815 "<flow>"
+	  on activitynode_ref 128791 // decision
+	end
+      end
+
+      activitynode 128791 decision ""
+	flow 129943 "Ne"
+	  on activityaction_ref 128919 // activity action Odabir vrste vozila i termina
+	end
+
+	flow 130199 "Da"
+	  on activityaction_ref 129175 // activity action Odabir prikaza vozila
+	end
+      end
+
+      activityaction 129175 "Odabir prikaza vozila"
+	opaque_action
+	flow 130071 "<flow>"
+	  on activitynode_ref 128663 // decision
+	end
+      end
+
+      activitynode 128919 merge ""
+	flow 130583 "<flow>"
+	  on activityaction_ref 129303 // activity action Odabir konkretnog vozila
+	end
+      end
+
+      activityaction 129303 "Odabir konkretnog vozila"
+	opaque_action
+	flow 130711 "<flow>"
+	  on activityaction_ref 129431 // activity action Potvrda rezervacije i rezervacija
+	end
+      end
+
+      activityaction 129431 "Potvrda rezervacije i rezervacija"
+	opaque_action
+	flow 130839 "<flow>"
+	  on activitynode_ref 129047 // activity_final
+	end
+      end
+
+      activitynode 129047 activity_final ""
+      end
+    end
+  end
+
+  usecaseview 128023 "DiagramiAktivnosti"
+    
+    usecasediagramsettings end
+    
+    sequencediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    activitydiagramsettings
+     end
   end
 end

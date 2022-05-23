@@ -1,0 +1,73 @@
+format 224
+
+activityactioncanvas 128023 activityaction_ref 128023 // activity action Unos kredencijala i prijava na sistem
+  
+  show_opaque_action_definition default
+  xyzwh 389 492 2000 150 57
+end
+activitynodecanvas 128151 activitynode_ref 128023 // initial_node
+  xyz 194 77 2000
+end
+activityactioncanvas 128279 activityaction_ref 128151 // activity action Ulazak u aplikaciju. Da li je korisnik ulogovan?
+  
+  show_opaque_action_definition default
+  xyzwh 128 180 2000 181 71
+end
+activitynodecanvas 128407 activitynode_ref 128151 // decision
+  xyz 206 358 2000
+end
+activityactioncanvas 128663 activityaction_ref 128279 // activity action Prikaz pocetnog ekrana
+  
+  show_opaque_action_definition default
+  xyzwh 267 770 2000 100 60
+end
+activitynodecanvas 129175 activitynode_ref 128279 // activity_final
+  xyz 307 916 2000
+end
+activitynodecanvas 130071 activitynode_ref 128407 // decision
+  xyz 453 633 2005
+end
+flowcanvas 128535 flow_ref 128023 // <flow>
+  
+  from ref 128279 z 2001 to ref 128407
+   write_horizontally default
+end
+flowcanvas 128791 flow_ref 128151 // Jeste
+  
+  from ref 128407 z 2001 label "Jeste" xyz 124 355 3000 to point 74 371
+  line 128919 z 2001 to point 76 798
+  line 130839 z 2001 to ref 128663
+   write_horizontally default
+end
+flowcanvas 129303 flow_ref 128279 // <flow>
+  
+  from ref 128663 z 2001 to ref 129175
+   write_horizontally default
+end
+flowcanvas 129431 flow_ref 128407 // Nije
+  
+  from ref 128407 z 2001 label "Nije" xyz 335.5 356.5 3000 to point 460 370
+  line 129559 z 2001 to ref 128023
+   write_horizontally default
+end
+flowcanvas 130199 flow_ref 128663 // Neuspesna prijava / neispravni kredencijali
+  decenter_begin 405
+  
+  from ref 130071 z 2006 label "Neuspesna prijava / neispravni kredencijali" xyz 207 612.5 3000 to point 176 646
+  line 130327 z 2006 to point 176 518
+  line 130455 z 2006 to ref 128023
+   write_horizontally default
+end
+flowcanvas 130583 flow_ref 128791 // <flow>
+  
+  from ref 128023 z 2006 to ref 130071
+   write_horizontally default
+end
+flowcanvas 130967 flow_ref 128919 // Uspesna prijava
+  
+  from ref 130071 z 2006 label "Uspesna prijava" xyz 538 627 3000 to point 679 650
+  line 131223 z 2006 to point 680 797
+  line 131095 z 2006 to ref 128663
+   write_horizontally default
+end
+end
