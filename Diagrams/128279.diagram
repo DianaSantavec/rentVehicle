@@ -63,13 +63,13 @@ flowcanvas 128279 flow_ref 129047 // <flow>
 end
 flowcanvas 128919 flow_ref 129303 // Mapa
   
-  from ref 128407 z 2001 label "Mapa" xyz 158 601 3000 to point 112 619
+  from ref 128407 z 2001 label "Mapa" xyz 158 601 2001 to point 112 619
   line 129047 z 2001 to ref 128663
    write_horizontally default
 end
 flowcanvas 129175 flow_ref 129431 // Lista
   
-  from ref 128407 z 2001 label "Lista" xyz 313 601 3000 to point 382 618
+  from ref 128407 z 2001 label "Lista" xyz 313 601 2001 to point 382 618
   line 129303 z 2001 to ref 128791
    write_horizontally default
 end
@@ -90,7 +90,7 @@ flowcanvas 130071 flow_ref 129815 // <flow>
 end
 flowcanvas 130199 flow_ref 129943 // Ne
   
-  from ref 129943 z 2001 label "Ne" xyz 574 431 3000 to point 673 446
+  from ref 129943 z 2001 label "Ne" xyz 574 431 2001 to point 673 446
   line 130583 z 2001 to point 674 253
   line 130455 z 2001 to ref 129431
    write_horizontally default
@@ -102,7 +102,7 @@ flowcanvas 130839 flow_ref 130071 // <flow>
 end
 flowcanvas 130967 flow_ref 130199 // Da
   
-  from ref 129943 z 2001 label "Da" xyz 350 443 3000 to point 249 448
+  from ref 129943 z 2001 label "Da" xyz 350 443 2001 to point 249 448
   line 131095 z 2001 to ref 130711
    write_horizontally default
 end

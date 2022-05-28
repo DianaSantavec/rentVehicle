@@ -2,7 +2,7 @@ format 224
 
 classcanvas 128127 class_ref 128127 // Korisnik
   simpleclassdiagramsettings end
-  xyz 34.1 229.3 2000
+  xyz 33.1 228.3 2000
 end
 classcanvas 128255 class_ref 128255 // Serviser
   simpleclassdiagramsettings end
@@ -21,112 +21,52 @@ classcanvas 128639 class_ref 128639 // Vozaci
   xyz 29 421.9 2000
 end
 usecasecanvas 128767 usecase_ref 128127 // Rezervacija vozila
-  xyzwh 267.5 304.4 3005 116 45 label_xy 279 320
+  xyzwh 267 304 3005 116 45 label_xy 279 320
 end
 usecasecanvas 129023 usecase_ref 128255 // Registracija korisnika
-  xyzwh 121.5 422.8 3005 149 41 label_xy 143 437
+  xyzwh 121 422 3005 149 41 label_xy 143 437
 end
 usecasecanvas 129279 usecase_ref 128383 // Prikaz mape
-  xyzwh 359.2 496.6 3005 99 37 label_xy 373 508
+  xyzwh 359 496 3005 99 37 label_xy 373 508
 end
 usecasecanvas 130175 usecase_ref 128511 // Odabir vozila
-  xyzwh 486.2 417.9 3005 106 49 label_xy 503 434
+  xyzwh 486 417 3005 106 49 label_xy 503 434
 end
 usecasecanvas 130431 usecase_ref 128639 // Odabir lokacije
-  xyzwh 500.9 534.3 3005 102 47 label_xy 513 552
+  xyzwh 500 534 3005 102 47 label_xy 513 552
 end
 usecasecanvas 131327 usecase_ref 128895 // Upotreba vozila
-  xyzwh 122.3 64.4 3005 112 46 label_xy 139 82
+  xyzwh 122 64 3005 112 46 label_xy 139 82
 end
 usecasecanvas 131583 usecase_ref 129023 // Obracunavanje goriva
-  xyzwh 323.8 7.6 3005 138 55 label_xy 332 28
+  xyzwh 323 7 3005 138 55 label_xy 332 28
 end
-usecasecanvas 131967 usecase_ref 129151 // Odabir nacina placanja
-  xyzwh 345.6 67 3005 139 48 label_xy 352 85
+usecasecanvas 131967 usecase_ref 129151 // Odabir Nacina Placanja
+  xyzwh 345 67 3005 139 48 label_xy 352 85
 end
 usecasecanvas 132223 usecase_ref 129279 // Obracunavanje popusta
-  xyzwh 338.9 123.1 3005 146 53 label_xy 348 141
+  xyzwh 338 123 3005 146 53 label_xy 348 141
 end
 usecasecanvas 132735 usecase_ref 129407 // Prijavljivanje ostecenja
-  xyzwh 210.8 157.4 3005 145 59 label_xy 223 182
+  xyzwh 210 157 3005 145 59 label_xy 223 182
 end
 usecasecanvas 133375 usecase_ref 129535 // Prikaz liste prijavljenih ostecenja
-  xyzwh 1232.5 258.8 3005 187 48 label_xy 1241 277
+  xyzwh 1232 258 3005 187 48 label_xy 1241 277
 end
 usecasecanvas 133631 usecase_ref 129663 // "Chat"
-  xyzwh 616.3 672.3 3005 64 32 label_xy 630 681
+  xyzwh 616 672 3005 64 32 label_xy 630 681
 end
-usecasecanvas 134015 usecase_ref 129791 // Unos novog vozila
-  xyzwh 1183.8 60.5 3005 79 31 label_xy 1175 67
+usecasecanvas 134015 usecase_ref 129791 // Unos vozila
+  xyzwh 1183 60 3005 79 31 label_xy 1175 67
 end
 usecasecanvas 134143 usecase_ref 129919 // Prikaz liste vozila
-  xyzwh 976.5 190.6 3005 119 48 label_xy 988 209
+  xyzwh 976 190 3005 119 48 label_xy 988 209
 end
 usecasecanvas 134655 usecase_ref 130175 // Uklanjanje vozila
-  xyzwh 1253.6 99.9 3005 103 44 label_xy 1260 113
+  xyzwh 1253 99 3005 103 44 label_xy 1260 113
 end
-usecasecanvas 135167 usecase_ref 130303 // Obracunavanje troskova
-  xyzwh 922.4 437.5 3005 150 57 label_xy 934 457
-end
-usecasecanvas 136575 usecase_ref 137087 // Prikaz liste rezervacija vozila
-  xyzwh 95.2 514.6 3005 168 61 label_xy 103 539
-end
-usecasecanvas 137087 usecase_ref 137343 // Prikaz liste korisnika
-  xyzwh 625.5 217.6 3005 141 54 label_xy 641 239
-end
-usecasecanvas 137215 usecase_ref 137471 // Prikaz podataka o korisniku
-  xyzwh 791.4 24.7 3005 171 58 label_xy 807 45
-end
-usecasecanvas 137343 usecase_ref 137599 // Upravljanje popustima
-  xyzwh 615.3 20.5 3005 145 51 label_xy 630 38
-end
-usecasecanvas 137599 usecase_ref 137727 // Odabri korisnika
-  xyzwh 642.6 125.4 3005 105 44 label_xy 653 142
-end
-usecasecanvas 139135 usecase_ref 137855 // Prikaz liste zaposlenih
-  xyzwh 862.9 688.1 3005 139 63 label_xy 868 716
-end
-usecasecanvas 139391 usecase_ref 137983 // Upravljanje statusom korisnika
-  xyzwh 986.8 60.4 3005 152 54 label_xy 981 79
-end
-usecasecanvas 139903 usecase_ref 138111 // Prikaz podataka o radniku
-  xyzwh 1033.7 899.1 3005 181 61 label_xy 1054 921
-end
-usecasecanvas 140159 usecase_ref 138239 // Odabir zaposlenog
-  xyzwh 854.4 804.9 3005 125 54 label_xy 868 825
-end
-usecasecanvas 140543 usecase_ref 138367 // Promena podataka o zaposlenom
-  xyzwh 1303.3 929.5 3005 114 48 label_xy 1272 950
-end
-usecasecanvas 143359 usecase_ref 145791 // Odabir tipa vozila
-  xyzwh 445 345 3005 112 52 label_xy 459 362
-end
-usecasecanvas 143871 usecase_ref 145919 // Prijavljivanje korisnika
-  xyzwh 250.6 229.4 3011 165 50 label_xy 262 249
-end
-usecasecanvas 144127 usecase_ref 146047 // Promena podataka o korisniku
-  xyzwh 482.2 181.5 3005 64 32 label_xy 434 213
-end
-usecasecanvas 144511 usecase_ref 146175 // Promena statusa vozila
-  xyzwh 1315 145.5 3005 64 32 label_xy 1285 177
-end
-usecasecanvas 144895 usecase_ref 146303 // Isplata troskova
-  xyzwh 937.5 551 3005 64 32 label_xy 929 582
-end
-usecasecanvas 145023 usecase_ref 146431 // Isplata plata
-  xyzwh 1303.5 517 3005 64 32 label_xy 1304 548
-end
-usecasecanvas 145151 usecase_ref 146559 // Komunikacija sa bankom
-  xyzwh 1167.2 643.2 3005 64 32 label_xy 1133 674
-end
-usecasecanvas 145919 usecase_ref 146687 // Unos novog zaposlenog
-  xyzwh 892.8 912.4 3005 64 32 label_xy 861 943
-end
-usecasecanvas 146175 usecase_ref 146815 // Promena statusa zaposlenog
-  xyzwh 1354 852.6 3010 64 32 label_xy 1308 884
-end
-usecasecanvas 146687 usecase_ref 146943 // Promena podataka o vozilu
-  xyzwh 1361.6 217.4 3010 64 32 label_xy 1321 248
+usecasecanvas 135167 usecase_ref 130303 // Obracunavanje plata
+  xyzwh 922 437 3005 150 57 label_xy 934 457
 end
 line 128895 ----
   from ref 128767 z 3006 to ref 128127
@@ -151,100 +91,20 @@ end
 line 132863 ----
   from ref 128127 z 3006 to ref 132735
 line 133759 ----
-  from ref 128127 z 3006 to point 629.9 300.8
+  from ref 128127 z 3006 to point 629 300
   line 140799 z 3006 to ref 133631
 line 134527 ----
   from ref 134143 z 3006 to ref 128383
 simplerelationcanvas 134911 simplerelation_ref 129279
-  decenter_begin 566
+  decenter_begin 564
   from ref 134655 z 3006 stereotype "<<extend>>" xyz 1140 158 3000 to ref 134143
 end
 line 135295 ----
   from ref 128383 z 3006 to ref 135167
 line 135423 ----
   from ref 129279 z 3006 to ref 128511
-simplerelationcanvas 135679 simplerelation_ref 135935
-  from ref 133375 z 3006 stereotype "<<extend>>" xyz 1132 244 3000 to ref 134143
-end
-line 136703 ----
-  from ref 128639 z 3006 to ref 136575
-line 137471 ----
-  from ref 137087 z 3006 to ref 128383
-simplerelationcanvas 137855 simplerelation_ref 136575
-  from ref 137599 z 3006 stereotype "<<extend>>" xyz 665 192 3000 to ref 137087
-end
-simplerelationcanvas 137983 simplerelation_ref 136703
-  from ref 137599 z 3006 stereotype "<<include>>" xyz 742 103 3000 to ref 137215
-end
-simplerelationcanvas 138111 simplerelation_ref 136831
-  from ref 137343 z 3006 stereotype "<<extend>>" xyz 662 98 3000 to ref 137599
-end
-line 138239 ----
-  from ref 128511 z 3006 to ref 136575
-relationcanvas 138367 relation_ref 128127 // <generalisation>
-  from ref 128639 z 2001 to ref 128127
-  no_role_a no_role_b
-  no_multiplicity_a no_multiplicity_b
-end
 line 138623 ----
   from ref 133631 z 3006 to ref 128511
-simplerelationcanvas 138751 simplerelation_ref 136959
-  from ref 134015 z 3006 stereotype "<<extend>>" xyz 1101 140 3000 to ref 134143
-end
-line 139263 ----
-  from ref 128383 z 3006 to ref 139135
-simplerelationcanvas 139519 simplerelation_ref 137087
-  from ref 139391 z 3006 stereotype "<<extend>>" xyz 835 117 3000 to ref 137599
-end
-simplerelationcanvas 140287 simplerelation_ref 137343
-  from ref 139135 z 3006 stereotype "<<extend>>" xyz 892 776 3000 to ref 140159
-end
-simplerelationcanvas 140415 simplerelation_ref 137471
-  from ref 140159 z 3006 stereotype "<<include>>" xyz 984 877 3000 to ref 139903
-end
-simplerelationcanvas 143487 simplerelation_ref 145151
-  from ref 143359 z 3006 stereotype "<<extend>>" xyz 381 346 3000 to ref 128767
-end
-simplerelationcanvas 143615 simplerelation_ref 145279
-  from ref 130175 z 3006 stereotype "<<extend>>" xyz 486 405 3000 to ref 143359
-end
-simplerelationcanvas 143743 simplerelation_ref 145407
-  from ref 128767 z 3006 stereotype "<<extend>>" xyz 334 420 3000 to ref 129279
-end
-line 143999 ----
-  from ref 143871 z 3012 to ref 128127
-line 144255 ----
-  from ref 144127 z 3006 to ref 128127
-simplerelationcanvas 144383 simplerelation_ref 145535
-  from ref 144127 z 3006 stereotype "<<extend>>" xyz 561.5 171.5 3000 to ref 137599
-end
-simplerelationcanvas 144639 simplerelation_ref 145663
-  from ref 144511 z 3006 stereotype "<<extend>>" xyz 1172.5 182.5 3000 to ref 134143
-end
 line 144767 ----
   from ref 128255 z 3006 to ref 134143
-simplerelationcanvas 145535 simplerelation_ref 145791
-  from ref 145023 z 3006 stereotype "<<include>>" xyz 1233 594 3000 to ref 145151
-end
-simplerelationcanvas 145663 simplerelation_ref 145919
-  from ref 145023 z 3006 stereotype "<<extend>>" xyz 1154 500 3000 to ref 135167
-end
-simplerelationcanvas 145791 simplerelation_ref 146047
-  from ref 140543 z 3006 stereotype "<<extend>>" xyz 1225 941 3000 to ref 139903
-end
-simplerelationcanvas 146047 simplerelation_ref 146175
-  from ref 145919 z 3006 stereotype "<<extend>>" xyz 886 883 3000 to ref 140159
-end
-simplerelationcanvas 146303 simplerelation_ref 146303
-  from ref 146175 z 3011 stereotype "<<extend>>" xyz 1251 889 3000 to ref 139903
-end
-simplerelationcanvas 146431 simplerelation_ref 146431
-  from ref 144895 z 3006 stereotype "<<extend>>" xyz 946 520 3000 to ref 135167
-end
-simplerelationcanvas 146559 simplerelation_ref 146559
-  from ref 144895 z 3006 stereotype "<<include>>" xyz 1051 610 3000 to ref 145151
-end
-simplerelationcanvas 146815 simplerelation_ref 146687
-  from ref 146687 z 3011 stereotype "<<extend>>" xyz 1195 222 3000 to ref 134143
-end
 end

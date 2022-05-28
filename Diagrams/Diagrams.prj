@@ -1,15 +1,14 @@
 format 224
 "Diagrams"
-
   revision 6
-  modified_by 127 "dianas"
+  modified_by 23 "vindo"
 
 
   
   // class settings
   default_attribute_visibility private default_relation_visibility private default_operation_visibility public
   
-  classdiagramsettings draw_all_relations yes hide_attributes no hide_operations no hide_getset_operations no hide_ports no show_members_full_definition no show_members_visibility no show_members_stereotype no show_members_context no show_members_multiplicity no show_members_initialization no show_attribute_modifiers no member_max_width 127 show_parameter_dir yes show_parameter_name yes package_name_in_tab no class_drawing_mode natural drawing_language uml show_context_mode no auto_label_position yes show_relation_modifiers no show_relation_visibility no show_infonote no shadow yes gradient none show_stereotype_properties no end
+  classdiagramsettings draw_all_relations yes hide_attributes no hide_operations no hide_getset_operations no hide_ports no show_members_full_definition yes show_members_visibility yes show_members_stereotype no show_members_context no show_members_multiplicity yes show_members_initialization yes show_attribute_modifiers yes member_max_width 127 show_parameter_dir yes show_parameter_name yes package_name_in_tab no class_drawing_mode class drawing_language uml show_context_mode no auto_label_position yes show_relation_modifiers no show_relation_visibility no show_infonote no shadow yes gradient none show_stereotype_properties no end
   
   classcompositediagramsettings auto_label_position yes draw_all_relations yes shadow yes gradient none end
   
@@ -129,12 +128,6 @@ format 224
       explicit_switch_type ""
       mysql_decl ""
       
-      classrelation 128127 // <generalisation>
-	relation 128127 ---|>
-	  a public
-	    classrelation_ref 128127 // <generalisation>
-	  b parent class_ref 128127 // Korisnik
-      end
     end
 
     usecase 128127 "Rezervacija vozila"
@@ -164,12 +157,6 @@ format 224
       end
 
       simplerelation 128383
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 128383 // Prikaz mape
-      end
-
-      simplerelation 145407
 	-_->
 	  stereotype "extend"
 	  on usecase_ref 128383 // Prikaz mape
@@ -259,18 +246,6 @@ format 224
 	  stereotype "extend"
 	  on usecase_ref 128127 // Rezervacija vozila
       end
-
-      simplerelation 136319
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 128127 // Rezervacija vozila
-      end
-
-      simplerelation 145279
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 145791 // Odabir tipa vozila
-      end
     end
 
     usecase 128639 "Odabir lokacije"
@@ -354,7 +329,7 @@ format 224
       simplerelation 129023
 	-_->
 	  stereotype "include"
-	  on usecase_ref 129151 // Odabir nacina placanja
+	  on usecase_ref 129151 // Odabir Nacina Placanja
       end
     end
 
@@ -381,7 +356,7 @@ format 224
        end
     end
 
-    usecase 129151 "Odabir nacina placanja"
+    usecase 129151 "Odabir Nacina Placanja"
       
       usecasediagramsettings end
       
@@ -476,17 +451,6 @@ format 224
       
       activitydiagramsettings
        end
-      simplerelation 135935
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 129919 // Prikaz liste vozila
-      end
-
-      simplerelation 138367
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 138751 // Lista vozila za servisera
-      end
     end
 
     usecase 129663 "\"Chat\""
@@ -512,7 +476,7 @@ format 224
        end
     end
 
-    usecase 129791 "Unos novog vozila"
+    usecase 129791 "Unos vozila"
       
       usecasediagramsettings end
       
@@ -533,11 +497,6 @@ format 224
       
       activitydiagramsettings
        end
-      simplerelation 136959
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 129919 // Prikaz liste vozila
-      end
     end
 
     usecase 129919 "Prikaz liste vozila"
@@ -561,6 +520,34 @@ format 224
       
       activitydiagramsettings
        end
+    end
+
+    usecase 130047 "Odabir tipa vozila"
+      
+      usecasediagramsettings end
+      
+      sequencediagramsettings end
+      
+      collaborationdiagramsettings end
+      
+      classdiagramsettings member_max_width 0 end
+      
+      classcompositediagramsettings end
+      
+      objectdiagramsettings end
+      
+      objectcompositediagramsettings end
+      
+      statediagramsettings
+       end
+      
+      activitydiagramsettings
+       end
+      simplerelation 129407
+	-_->
+	  stereotype "extend"
+	  on usecase_ref 129919 // Prikaz liste vozila
+      end
     end
 
     usecase 130175 "Uklanjanje vozila"
@@ -591,7 +578,7 @@ format 224
       end
     end
 
-    usecase 130303 "Obracunavanje troskova"
+    usecase 130303 "Obracunavanje plata"
       
       usecasediagramsettings end
       
@@ -612,819 +599,1143 @@ format 224
       
       activitydiagramsettings
        end
-      simplerelation 136063
-	-_->
-	  stereotype "include"
-	  on usecase_ref 136959 // Stamapanje priznanica
+    end
+  end
+
+  usecaseview 128023 "DiagramiAktivnosti"
+    
+    usecasediagramsettings end
+    
+    sequencediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    activitydiagramsettings
+     end
+    activity 128023 "Aktivnosti mobilne aplikacije"
+      activitydiagram 128151 "Login/register flow"
+	activitydiagramsettings
+	 end
+	size A4
+      end
+
+      activityaction 128023 "Unos kredencijala i prijava na sistem"
+	opaque_action
+	flow 128535 "<flow>"
+	  on activityaction_ref 128407 // activity action Uspesna prijava
+	end
+
+	flow 128791 "<flow>"
+	  on activitynode_ref 128407 // decision
+	end
+      end
+
+      activitynode 128023 initial_node ""
+      end
+
+      activityaction 128151 "Ulazak u aplikaciju. Da li je korisnik ulogovan?"
+	opaque_action
+	flow 128023 "<flow>"
+	  on activitynode_ref 128151 // decision
+	end
+      end
+
+      activitynode 128151 decision ""
+	flow 128151 "Jeste"
+	  on activityaction_ref 128279 // activity action Prikaz pocetnog ekrana
+	end
+
+	flow 128407 "Nije"
+	  on activityaction_ref 128023 // activity action Unos kredencijala i prijava na sistem
+	end
+      end
+
+      activityaction 128279 "Prikaz pocetnog ekrana"
+	opaque_action
+	flow 128279 "<flow>"
+	  on activitynode_ref 128279 // activity_final
+	end
+      end
+
+      activitynode 128279 activity_final ""
+      end
+
+      activityaction 128407 "Uspesna prijava"
+	opaque_action
+      end
+
+      activitynode 128407 decision ""
+	flow 128663 "Neuspesna prijava / neispravni kredencijali"
+	  on activityaction_ref 128023 // activity action Unos kredencijala i prijava na sistem
+	end
+
+	flow 128919 "Uspesna prijava"
+	  on activityaction_ref 128279 // activity action Prikaz pocetnog ekrana
+	end
+      end
+
+      activitydiagram 128279 "Rezervacija vozila"
+	activitydiagramsettings draw_all_relations no
+	 end
+	size A4
+      end
+
+      activitynode 128535 initial_node ""
+	flow 129047 "<flow>"
+	  on activityaction_ref 128535 // activity action 
+	end
+      end
+
+      activityaction 128535 ""
+	opaque_action
+	flow 129175 "<flow>"
+	  on activitynode_ref 128663 // decision
+	end
+
+	flow 129559 "<flow>"
+	  on activityaction_ref 128919 // activity action Odabir vrste vozila i termina
+	end
+      end
+
+      activitynode 128663 decision ""
+	flow 129303 "Mapa"
+	  on activityaction_ref 128663 // activity action Prikaz mape sa lokacijom svih dostpunih vozila odabrane vrste
+	end
+
+	flow 129431 "Lista"
+	  on activityaction_ref 128791 // activity action Prikaz liste svih dostupnih vozila odabrane vrste
+	end
+      end
+
+      activityaction 128663 "Prikaz mape sa lokacijom svih dostpunih vozila odabrane vrste"
+	opaque_action
+	flow 130327 "<flow>"
+	  on activitynode_ref 128919 // merge
+	end
+      end
+
+      activityaction 128791 "Prikaz liste svih dostupnih vozila odabrane vrste"
+	opaque_action
+	flow 130455 "<flow>"
+	  on activitynode_ref 128919 // merge
+	end
+      end
+
+      activityaction 128919 "Odabir vrste vozila i termina"
+	opaque_action
+	flow 129687 "<flow>"
+	  on activityaction_ref 129047 // activity action Da li ima slobodnih vozila u odabranom terminu?
+	end
+      end
+
+      activityaction 129047 "Da li ima slobodnih vozila u odabranom terminu?"
+	opaque_action
+	flow 129815 "<flow>"
+	  on activitynode_ref 128791 // decision
+	end
+      end
+
+      activitynode 128791 decision ""
+	flow 129943 "Ne"
+	  on activityaction_ref 128919 // activity action Odabir vrste vozila i termina
+	end
+
+	flow 130199 "Da"
+	  on activityaction_ref 129175 // activity action Odabir prikaza vozila
+	end
+      end
+
+      activityaction 129175 "Odabir prikaza vozila"
+	opaque_action
+	flow 130071 "<flow>"
+	  on activitynode_ref 128663 // decision
+	end
+      end
+
+      activitynode 128919 merge ""
+	flow 130583 "<flow>"
+	  on activityaction_ref 129303 // activity action Odabir konkretnog vozila
+	end
+      end
+
+      activityaction 129303 "Odabir konkretnog vozila"
+	opaque_action
+	flow 130711 "<flow>"
+	  on activityaction_ref 129431 // activity action Potvrda rezervacije i rezervacija
+	end
+      end
+
+      activityaction 129431 "Potvrda rezervacije i rezervacija"
+	opaque_action
+	flow 130839 "<flow>"
+	  on activitynode_ref 129047 // activity_final
+	end
+      end
+
+      activitynode 129047 activity_final ""
+      end
+    end
+  end
+
+  classview 128023 "KlasniDijagrami"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 134807 "Klase"
+      classdiagramsettings draw_all_relations no member_max_width 0 end
+      size A3
+    end
+
+    class 128023 "Vozilo"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 128151 // <association>
+	relation_ref 128023 // <association>
+      end
+
+      attribute 128151 "id"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 129303 // <association>
+	relation 129175 ----
+	  a role_name "" multiplicity "*" private
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 129303 // <association>
+	  b role_name "" multiplicity "1" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 129431 // <association>
+      end
+
+      classrelation 130967 // <association>
+	relation_ref 129943 // <association>
+      end
+
+      classrelation 131223 // <association>
+	relation_ref 130071 // <association>
+      end
+
+      attribute 129943 "trenutnaLokacija"
+	private explicit_type "Coordinates"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131863 "status"
+	private explicit_type "enum"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 128151 "TipVozila"
+      visibility package stereotype "entity"
+      cpp_decl "${comment}${template}class ${name}${inherit} {
+${members}};
+${inlines}
+"
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl "${comment}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl "${comment}${abstract}${custom}valuetype ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128023 "nazivTipa"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 128023 // <association>
+	relation 128023 ----
+	  a role_name "" multiplicity "*" private
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 128023 // <association>
+	  b role_name "" multiplicity "1" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 128151 // <association>
+      end
+    end
+
+    class 128279 "Korisnikk"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128919 "ostvarenPopust"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 128791 // (extends)
+	relation 128663 ---> name "extends"
+	  a role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 128791 // (extends)
+	  b parent class_ref 128919 // GeneralData
+      end
+
+      classrelation 129559 // <association>
+	relation 129303 ----
+	  a role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 129559 // <association>
+	  b role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 129687 // <association>
+      end
+
+      classrelation 129687 // <association>
+	relation_ref 129303 // <association>
+      end
+
+      classrelation 129815 // <association>
+	relation 129431 ----
+	  a role_name "" multiplicity "*" private
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 129815 // <association>
+	  b role_name "" multiplicity "1" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 129943 // <association>
+      end
+
+      classrelation 130839 // <association>
+	relation 129943 ----
+	  a role_name "" multiplicity "*" private
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 130839 // <association>
+	  b role_name "" multiplicity "*" private
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 130967 // <association>
+	  association_type class_ref 129047 // Iznajmljivanje
+      end
+
+      classrelation 131095 // <association>
+	relation 130071 ----
+	  a role_name "" multiplicity "*" private
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 131095 // <association>
+	  b role_name "" multiplicity "*" private
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 131223 // <association>
       end
 
     end
 
-    usecase 136959 "Stamapanje priznanica"
+    class 128407 "Vozac"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
       
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-    end
+      classrelation 128279 // <realization>
+	relation 128151 -_-|>
+	  a public
+	    python "${type}"
+	    classrelation_ref 128279 // <realization>
+	  b parent class_ref 128279 // Korisnikk
+      end
 
-    usecase 137087 "Prikaz liste rezervacija vozila"
-      
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-    end
+      classrelation 128407 // <unidirectional association>
+	relation 128279 --->
+	  a role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 128407 // <unidirectional association>
+	  b parent class_ref 128407 // Vozac
+      end
 
-    usecase 137215 "Privremen prekid upotrebe vozila"
-      
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 136447
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 128895 // Upotreba vozila
+      classrelation 128535 // (extends)
+	relation 128407 ---> name "extends"
+	  a role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 128535 // (extends)
+	  b parent class_ref 128279 // Korisnikk
+      end
+
+      classrelation 128663 // (extends)
+	relation 128535 ---> name "extends"
+	  a role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 128663 // (extends)
+	  b parent class_ref 128919 // GeneralData
+      end
+
+      classrelation 131479 // (extends)
+	relation 130327 ---> name "extends"
+	  a role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 131479 // (extends)
+	  b parent class_ref 129303 // Zaposlen
       end
     end
 
-    usecase 137343 "Prikaz liste korisnika"
+    class 128535 "TehnickaPodrskaKlasa"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
       
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-    end
+      classrelation 129175 // (extends)
+	relation 129047 ---> name "extends"
+	  a role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 129175 // (extends)
+	  b parent class_ref 128919 // GeneralData
+      end
 
-    usecase 137471 "Prikaz podataka o korisniku"
-      
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-    end
-
-    usecase 137599 "Upravljanje popustima"
-      
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 136831
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 137727 // Odabri korisnika
+      classrelation 131607 // (extends)
+	relation 130455 ---> name "extends"
+	  a role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 131607 // (extends)
+	  b parent class_ref 129303 // Zaposlen
       end
     end
 
-    usecase 137727 "Odabri korisnika"
+    class 128663 "AdministratorKlasa"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
       
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 136575
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 137343 // Prikaz liste korisnika
+      classrelation 128919 // (extends)
+	relation 128791 ---> name "extends"
+	  a role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 128919 // (extends)
+	  b parent class_ref 128919 // GeneralData
       end
 
-      simplerelation 136703
-	-_->
-	  stereotype "include"
-	  on usecase_ref 137471 // Prikaz podataka o korisniku
+      classrelation 131735 // (extends)
+	relation 130583 ---> name "extends"
+	  a role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 131735 // (extends)
+	  b parent class_ref 129303 // Zaposlen
       end
     end
 
-    usecase 137855 "Prikaz liste zaposlenih"
+    class 128791 "ServiserKlasa"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
       
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 137215
-	-_->
-	  stereotype "include"
-	  on usecase_ref 138111 // Prikaz podataka o radniku
+      classrelation 129047 // (extends)
+	relation 128919 ---> name "extends"
+	  a role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 129047 // (extends)
+	  b parent class_ref 128919 // GeneralData
       end
 
-      simplerelation 137343
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 138239 // Odabir zaposlenog
+      classrelation 131863 // (extends)
+	relation 130711 ---> name "extends"
+	  a role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 131863 // (extends)
+	  b parent class_ref 129303 // Zaposlen
       end
     end
 
-    usecase 137983 "Upravljanje statusom korisnika"
+    class 128919 "GeneralData"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
       
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 137087
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 137727 // Odabri korisnika
+      attribute 128279 "id"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128535 "ime"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128663 "prezime"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128407 "jmbg"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128791 "brojLicneKarte"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
 
-    usecase 138111 "Prikaz podataka o radniku"
+    class 129047 "Iznajmljivanje"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
       
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-    end
+      attribute 129175 "pocetnoVreme"
+	private explicit_type "DateTime"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
 
-    usecase 138239 "Odabir zaposlenog"
-      
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 137471
-	-_->
-	  stereotype "include"
-	  on usecase_ref 138111 // Prikaz podataka o radniku
+      attribute 129303 "krajnjeVreme"
+	private explicit_type "DateTime"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 129431 // <association>
+	relation_ref 129175 // <association>
+      end
+
+      classrelation 129943 // <association>
+	relation_ref 129431 // <association>
+      end
+
+      attribute 129431 "cena"
+	private explicit_type "float"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 132631 // <association>
+	relation 131479 ----
+	  a role_name "" multiplicity "*" private
+	    python "${comment}${self}${name} = ${stereotype}()
+"
+	    classrelation_ref 132631 // <association>
+	  b role_name "" multiplicity "1" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 132759 // <association>
       end
     end
 
-    usecase 138367 "Promena podataka o zaposlenom"
+    class 129303 "Zaposlen"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
       
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 137599
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 138239 // Odabir zaposlenog
+      classrelation 131351 // (extends)
+	relation 130199 ---> name "extends"
+	  a role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 131351 // (extends)
+	  b parent class_ref 128919 // GeneralData
       end
 
-      simplerelation 146047
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 138111 // Prikaz podataka o radniku
+      attribute 129559 "plata"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
-    end
 
-    usecase 138495 "Prikaz liste servisera"
-      
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 137727
-	-_->
-	  stereotype "include"
-	  on usecase_ref 138623 // Odabir servisera
+      attribute 129687 "brojRacuna"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
 
-    usecase 138623 "Odabir servisera"
+    class 129431 "MotornoVozilo"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
       
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 138239
-	-_->
-	  stereotype "include"
-	  on usecase_ref 139135 // Prikaz podataka o serviseru
+      classrelation 131991 // (extends)
+	relation 130839 ---> name "extends"
+	  a role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 131991 // (extends)
+	  b parent class_ref 128023 // Vozilo
+      end
+
+      attribute 130071 "registarskiBroj"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130199 "brojMotora"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130327 "brojSasije"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130455 "marka"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130583 "model"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130711 "jeYugo"
+	private explicit_type "bool"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
 
-    usecase 138751 "Lista vozila za servisera"
+    class 129559 "Biciklo"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
       
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 137855
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 138623 // Odabir servisera
+      classrelation 132119 // (extends)
+	relation 130967 ---> name "extends"
+	  a role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 132119 // (extends)
+	  b parent class_ref 128023 // Vozilo
+      end
+
+      attribute 130839 "serijskiBroj"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131351 "imaKorpuZaDete"
+	private explicit_type "bool"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
 
-    usecase 138879 "Komunikacija sa serviserom"
+    class 129687 "ElektricniTrotinet"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
       
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 137983
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 138623 // Odabir servisera
+      classrelation 132247 // (extends)
+	relation 131095 ---> name "extends"
+	  a role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 132247 // (extends)
+	  b parent class_ref 128023 // Vozilo
+      end
+
+      attribute 130967 "serijskiBroj"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131095 "snaga"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131223 "dozvoljenaKilaza"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
 
-    usecase 139007 "Isplata"
+    class 129815 "Motor"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
       
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 138111
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 138623 // Odabir servisera
+      classrelation 132375 // (extends)
+	relation 131223 ---> name "extends"
+	  a role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 132375 // (extends)
+	  b parent class_ref 129431 // MotornoVozilo
       end
     end
 
-    usecase 139135 "Prikaz podataka o serviseru"
+    class 129943 "Automobil"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
       
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-    end
-
-    usecase 139263 "Odabir vozila (serviser)"
-      
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 138495
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 138751 // Lista vozila za servisera
-      end
-
-      simplerelation 138623
-	-_->
-	  stereotype "include"
-	  on usecase_ref 129535 // Prikaz liste prijavljenih ostecenja
+      classrelation 132503 // (extends)
+	relation 131351 ---> name "extends"
+	  a role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 132503 // (extends)
+	  b parent class_ref 129431 // MotornoVozilo
       end
     end
 
-    usecase 145791 "Odabir tipa vozila"
+    class 130071 "Ostecenje"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
       
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 145151
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 128127 // Rezervacija vozila
+      classrelation 132759 // <association>
+	relation_ref 131479 // <association>
+      end
+
+      attribute 131607 "opis"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131735 "prioritet"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl "${comment}${self}${name} = ${value}
+"
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
 
-    usecase 145919 "Prijavljivanje korisnika"
+    class 130199 "KorisnikKontroler"
+      visibility package stereotype "control"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
       
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-    end
+      classrelation 133015 // <association>
+	relation_ref 131607 // <association>
+      end
 
-    usecase 146047 "Promena podataka o korisniku"
-      
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 145535
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 137727 // Odabri korisnika
+      operation 128279 "kreirajKorisnika"
+	public explicit_return_type ""
+	nparams 4
+	  param in name "i" explicit_type "string"
+	  param in name "p" explicit_type "string"
+	  param in name "j" explicit_type "string"
+	  param in name "brLKarte" explicit_type "string"
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${p0}${v0}, ${p1}${v1}, ${p2}${v2}, ${p3}${v3}${)}:
+${docstring}${body}
+"
+	
+      end
+
+      classrelation 133271 // <dependency>
+	relation 131863 -_->
+	  a public
+	    python "${type}"
+	    classrelation_ref 133271 // <dependency>
+	  b parent class_ref 128279 // Korisnikk
       end
     end
 
-    usecase 146175 "Promena statusa vozila"
+    class 130327 "LoginRegisterForma"
+      visibility package stereotype "boundary"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl "class ${name}${inherit}:
+${docstring}${members}
+"
+      idl_decl "${comment}${abstract}${local}interface ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
       
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 145663
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 129919 // Prikaz liste vozila
-      end
-    end
-
-    usecase 146303 "Isplata troskova"
-      
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 146431
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 130303 // Obracunavanje troskova
+      operation 128023 "login"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
       end
 
-      simplerelation 146559
-	-_->
-	  stereotype "include"
-	  on usecase_ref 146559 // Komunikacija sa bankom
-      end
-    end
-
-    usecase 146431 "Isplata plata"
-      
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 145791
-	-_->
-	  stereotype "include"
-	  on usecase_ref 146559 // Komunikacija sa bankom
+      operation 128151 "signup"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	python_def "${@}${static}${abstract}def ${name}${(}${)}:
+${docstring}${body}
+"
+	
       end
 
-      simplerelation 145919
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 130303 // Obracunavanje troskova
+      classrelation 132887 // <association>
+	relation 131607 ----
+	  a role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 132887 // <association>
+	  b role_name "" private
+	    python "${comment}${self}${name} = ${value}
+"
+	    classrelation_ref 133015 // <association>
       end
-    end
 
-    usecase 146559 "Komunikacija sa bankom"
-      
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-    end
-
-    usecase 146687 "Unos novog zaposlenog"
-      
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 146175
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 138239 // Odabir zaposlenog
-      end
-    end
-
-    usecase 146815 "Promena statusa zaposlenog"
-      
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 146303
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 138111 // Prikaz podataka o radniku
-      end
-    end
-
-    usecase 146943 "Promena podataka o vozilu"
-      
-      usecasediagramsettings end
-      
-      sequencediagramsettings end
-      
-      collaborationdiagramsettings end
-      
-      classdiagramsettings member_max_width 0 end
-      
-      classcompositediagramsettings end
-      
-      objectdiagramsettings end
-      
-      objectcompositediagramsettings end
-      
-      statediagramsettings
-       end
-      
-      activitydiagramsettings
-       end
-      simplerelation 146687
-	-_->
-	  stereotype "extend"
-	  on usecase_ref 129919 // Prikaz liste vozila
+      classrelation 133143 // <dependency>
+	relation 131735 -_->
+	  a public
+	    python "${type}"
+	    classrelation_ref 133143 // <dependency>
+	  b parent class_ref 130199 // KorisnikKontroler
       end
     end
   end

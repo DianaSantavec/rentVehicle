@@ -34,7 +34,7 @@ flowcanvas 128535 flow_ref 128023 // <flow>
 end
 flowcanvas 128791 flow_ref 128151 // Jeste
   
-  from ref 128407 z 2001 label "Jeste" xyz 124 355 3000 to point 74 371
+  from ref 128407 z 2001 label "Jeste" xyz 124 355 2001 to point 74 371
   line 128919 z 2001 to point 76 798
   line 130839 z 2001 to ref 128663
    write_horizontally default
@@ -46,14 +46,14 @@ flowcanvas 129303 flow_ref 128279 // <flow>
 end
 flowcanvas 129431 flow_ref 128407 // Nije
   
-  from ref 128407 z 2001 label "Nije" xyz 335.5 356.5 3000 to point 460 370
+  from ref 128407 z 2001 label "Nije" xyz 335 356 2001 to point 460 370
   line 129559 z 2001 to ref 128023
    write_horizontally default
 end
 flowcanvas 130199 flow_ref 128663 // Neuspesna prijava / neispravni kredencijali
   decenter_begin 405
   
-  from ref 130071 z 2006 label "Neuspesna prijava / neispravni kredencijali" xyz 207 612.5 3000 to point 176 646
+  from ref 130071 z 2006 label "Neuspesna prijava / neispravni kredencijali" xyz 207 612 2006 to point 176 646
   line 130327 z 2006 to point 176 518
   line 130455 z 2006 to ref 128023
    write_horizontally default
@@ -65,7 +65,7 @@ flowcanvas 130583 flow_ref 128791 // <flow>
 end
 flowcanvas 130967 flow_ref 128919 // Uspesna prijava
   
-  from ref 130071 z 2006 label "Uspesna prijava" xyz 538 627 3000 to point 679 650
+  from ref 130071 z 2006 label "Uspesna prijava" xyz 538 627 2006 to point 679 650
   line 131223 z 2006 to point 680 797
   line 131095 z 2006 to ref 128663
    write_horizontally default
