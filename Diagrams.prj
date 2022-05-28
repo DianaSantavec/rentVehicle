@@ -1,6 +1,6 @@
 format 224
 "Diagrams"
-  revision 4
+  revision 5
   modified_by 23 "vindo"
 
 
@@ -600,7 +600,29 @@ format 224
       activitydiagramsettings
        end
     end
+  end
 
+  usecaseview 128023 "DiagramiAktivnosti"
+    
+    usecasediagramsettings end
+    
+    sequencediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    activitydiagramsettings
+     end
     activity 128023 "Aktivnosti mobilne aplikacije"
       activitydiagram 128151 "Login/register flow"
 	activitydiagramsettings
@@ -764,28 +786,5 @@ format 224
       activitynode 129047 activity_final ""
       end
     end
-  end
-
-  usecaseview 128023 "DiagramiAktivnosti"
-    
-    usecasediagramsettings end
-    
-    sequencediagramsettings end
-    
-    collaborationdiagramsettings end
-    
-    classdiagramsettings member_max_width 0 end
-    
-    classcompositediagramsettings end
-    
-    objectdiagramsettings end
-    
-    objectcompositediagramsettings end
-    
-    statediagramsettings
-     end
-    
-    activitydiagramsettings
-     end
   end
 end
