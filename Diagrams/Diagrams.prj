@@ -1,6 +1,6 @@
 format 224
 "Diagrams"
-  revision 6
+  revision 7
   modified_by 127 "dianas"
 
 
@@ -8,7 +8,7 @@ format 224
   // class settings
   default_attribute_visibility private default_relation_visibility private default_operation_visibility public
   
-  classdiagramsettings draw_all_relations yes hide_attributes no hide_operations no hide_getset_operations no hide_ports no show_members_full_definition no show_members_visibility no show_members_stereotype no show_members_context no show_members_multiplicity no show_members_initialization no show_attribute_modifiers no member_max_width 127 show_parameter_dir yes show_parameter_name yes package_name_in_tab no class_drawing_mode natural drawing_language uml show_context_mode no auto_label_position yes show_relation_modifiers no show_relation_visibility no show_infonote no shadow yes gradient none show_stereotype_properties no end
+  classdiagramsettings draw_all_relations yes hide_attributes no hide_operations no hide_getset_operations no hide_ports no show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_context no show_members_multiplicity yes show_members_initialization yes show_attribute_modifiers yes member_max_width 127 show_parameter_dir yes show_parameter_name yes package_name_in_tab no class_drawing_mode class drawing_language uml show_context_mode no auto_label_position yes show_relation_modifiers no show_relation_visibility no show_infonote no shadow yes gradient none show_stereotype_properties no end
   
   classcompositediagramsettings auto_label_position yes draw_all_relations yes shadow yes gradient none end
   
@@ -1378,6 +1378,657 @@ format 224
       end
 
       activitynode 129047 activity_final ""
+      end
+    end
+  end
+
+  classview 128127 "DijagramKlasa"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    classdiagram 134655 "Klase"
+      classdiagramsettings member_max_width 0 end
+      size A2
+    end
+
+    class 135167 "MotornoVozilo"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128127 "registartskiBroj"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128255 "brojMotora"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128383 "brojSasije"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128511 "marka"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128639 "model"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 136703 // (extends)
+	relation 136447 ---> name "extends"
+	  a role_name "" private
+	    classrelation_ref 136703 // (extends)
+	  b parent class_ref 135551 // Vozilo
+      end
+    end
+
+    class 135295 "Automobil"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 136575 // (extends)
+	relation 136319 ---> name "extends"
+	  a role_name "" private
+	    classrelation_ref 136575 // (extends)
+	  b parent class_ref 135167 // MotornoVozilo
+      end
+    end
+
+    class 135423 "Motor"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 136447 // (extends)
+	relation 136191 ---> name "extends"
+	  a role_name "" private
+	    classrelation_ref 136447 // (extends)
+	  b parent class_ref 135167 // MotornoVozilo
+      end
+    end
+
+    class 135551 "Vozilo"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 128767 "id"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128895 "trenutnaLokacija"
+	private explicit_type "Coordinates"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129023 "status"
+	private explicit_type "enum"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 135679 // <association>
+	relation 135679 ----
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 135679 // <association>
+	  b role_name "" multiplicity "*" private
+	    classrelation_ref 135807 // <association>
+	  association_type class_ref 137087 // Iznajmljivanje
+      end
+    end
+
+    class 135679 "Biciklo"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129151 "serijskiBroj"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129279 "imaKoripuZaDete"
+	private explicit_type "bool"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 136319 // (extends)
+	relation 136063 ---> name "extends"
+	  a role_name "" private
+	    classrelation_ref 136319 // (extends)
+	  b parent class_ref 135551 // Vozilo
+      end
+    end
+
+    class 135807 "ElektricniTrotinet"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129407 "serijskiBroj"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129535 "snaga"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 129663 "dozvoljenaKilaza"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 136191 // (extends)
+	relation 135935 ---> name "extends"
+	  a role_name "" private
+	    classrelation_ref 136191 // (extends)
+	  b parent class_ref 135551 // Vozilo
+      end
+    end
+
+    class 135935 "KorisnikKlasa"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129791 "ostvarenPopust"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 134911 // (extends)
+	relation 134911 ---> name "extends"
+	  a role_name "" private
+	    classrelation_ref 134911 // (extends)
+	  b parent class_ref 136063 // GeneralData
+      end
+
+      classrelation 135807 // <association>
+	relation_ref 135679 // <association>
+      end
+    end
+
+    class 136063 "GeneralData"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 129919 "id"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130047 "ime"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130175 "prezime"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130303 "jmbg"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130431 "brojLicneKarte_Pasosa"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 136191 "Zaposlen"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 130559 "plata"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130687 "brojRacuna"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 135039 // (extends)
+	relation 135039 ---> name "extends"
+	  a role_name "" private
+	    classrelation_ref 135039 // (extends)
+	  b parent class_ref 136063 // GeneralData
+      end
+    end
+
+    class 136319 "VozacKlasa"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135551 // (extends)
+	relation 135551 ---> name "extends"
+	  a role_name "" private
+	    classrelation_ref 135551 // (extends)
+	  b parent class_ref 136191 // Zaposlen
+      end
+    end
+
+    class 136447 "TehnickaPodrskaKlasa"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135423 // (extends)
+	relation 135423 ---> name "extends"
+	  a role_name "" private
+	    classrelation_ref 135423 // (extends)
+	  b parent class_ref 136191 // Zaposlen
+      end
+    end
+
+    class 136575 "AdministratorKlasa"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135295 // (extends)
+	relation 135295 ---> name "extends"
+	  a role_name "" private
+	    classrelation_ref 135295 // (extends)
+	  b parent class_ref 136191 // Zaposlen
+      end
+    end
+
+    class 136703 "ServiserKlasa"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135167 // (extends)
+	relation 135167 ---> name "extends"
+	  a role_name "" private
+	    classrelation_ref 135167 // (extends)
+	  b parent class_ref 136191 // Zaposlen
+      end
+    end
+
+    class 136831 "KorisnikKotroler"
+      visibility package stereotype "control"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 128127 "kreirajKorisnika"
+	public explicit_return_type "bool"
+	nparams 4
+	  param in name "ime" explicit_type "string"
+	  param in name "preimze" explicit_type "string"
+	  param in name "jmbg" explicit_type "string"
+	  param in name "brojLicneKarte_Pasosa" explicit_type "string"
+	
+	
+	
+	
+	
+      end
+
+      classrelation 134783 // <dependency>
+	relation 134783 -_->
+	  a public
+	    classrelation_ref 134783 // <dependency>
+	  b parent class_ref 135935 // KorisnikKlasa
+      end
+    end
+
+    class 136959 "LoginRegisterForma"
+      visibility package stereotype "boundary"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl "${comment}${abstract}${local}interface ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 128255 "login"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 128383 "signup"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 134655 // <dependency>
+	relation 134655 -_->
+	  a public
+	    classrelation_ref 134655 // <dependency>
+	  b parent class_ref 136831 // KorisnikKotroler
+      end
+    end
+
+    class 137087 "Iznajmljivanje"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      attribute 130815 "pocetnoVreme"
+	private explicit_type "DateTime"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130943 "krajnjeVreme"
+	private explicit_type "DateTime"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131071 "cena"
+	private explicit_type "double"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 136063 // <association>
+	relation_ref 135807 // <association>
+      end
+    end
+
+    class 137215 "Ostecenje"
+      visibility package stereotype "entity"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      classrelation 135935 // <association>
+	relation 135807 ----
+	  a role_name "" multiplicity "*" private
+	    classrelation_ref 135935 // <association>
+	  b role_name "" multiplicity "1" private
+	    classrelation_ref 136063 // <association>
+      end
+
+      attribute 131199 "opis"
+	private explicit_type "string"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131327 "prioritet"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl ""
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
       end
     end
   end
