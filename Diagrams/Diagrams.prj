@@ -1,7 +1,7 @@
 format 224
 "Diagrams"
-  revision 7
-  modified_by 127 "dianas"
+  revision 8
+  modified_by 23 "vindo"
 
 
   
@@ -1219,9 +1219,9 @@ format 224
      end
     activity 128023 "Aktivnosti mobilne aplikacije"
       activitydiagram 128151 "Login/register flow"
-	activitydiagramsettings
+	activitydiagramsettings draw_all_relations no
 	 end
-	size A4
+	size A0
       end
 
       activityaction 128023 "Unos kredencijala i prijava na sistem"
@@ -1236,12 +1236,19 @@ format 224
       end
 
       activitynode 128023 initial_node ""
+	flow 137367 "<flow>"
+	  on activityaction_ref 128151 // activity action Ulazak u aplikaciju. Da li je korisnik ulogovan?
+	end
       end
 
       activityaction 128151 "Ulazak u aplikaciju. Da li je korisnik ulogovan?"
 	opaque_action
 	flow 128023 "<flow>"
 	  on activitynode_ref 128151 // decision
+	end
+
+	flow 138775 "<flow>"
+	  on activitynode_ref 135831 // merge
 	end
       end
 
@@ -1252,6 +1259,14 @@ format 224
 
 	flow 128407 "Nije"
 	  on activityaction_ref 128023 // activity action Unos kredencijala i prijava na sistem
+	end
+
+	flow 137495 "Nije"
+	  on activityaction_ref 135959 // activity action Da li korisnik ima nalog?
+	end
+
+	flow 138903 "Jeste"
+	  on activitynode_ref 135831 // merge
 	end
       end
 
@@ -1276,6 +1291,10 @@ format 224
 
 	flow 128919 "Uspesna prijava"
 	  on activityaction_ref 128279 // activity action Prikaz pocetnog ekrana
+	end
+
+	flow 138647 "Uspesna prijava"
+	  on activitynode_ref 135831 // merge
 	end
       end
 
@@ -1379,6 +1398,138 @@ format 224
 
       activitynode 129047 activity_final ""
       end
+
+      activityobject 128023 "Da li korisnik ima nalog"
+	 explicit_type ""
+	unordered 
+      end
+
+      activityaction 135959 "Da li korisnik ima nalog?"
+	opaque_action
+	flow 137623 "<flow>"
+	  on activitynode_ref 135575 // decision
+	end
+      end
+
+      activitynode 135575 decision ""
+	flow 137751 "Da"
+	  on activityaction_ref 128023 // activity action Unos kredencijala i prijava na sistem
+	end
+
+	flow 137879 "Ne"
+	  on activityaction_ref 136087 // activity action Prikaz forme za registraciju i unos osnovnih podataka
+	end
+
+	flow 140183 "Ne"
+	  on activitynode_ref 136215 // merge
+	end
+      end
+
+      activityaction 136087 "Prikaz forme za registraciju i unos osnovnih podataka"
+	opaque_action
+	flow 138007 "<flow>"
+	  on activityaction_ref 136215 // activity action Prikaz forme za slanje ocitane licne karte
+	end
+
+	flow 139927 "<flow>"
+	  on activityaction_ref 136727 // activity action Da li korisnik sa unetim podacima vec postoji?
+	end
+      end
+
+      activityaction 136215 "Prikaz forme za slanje ocitane licne karte"
+	opaque_action
+	flow 138135 "<flow>"
+	  on activityaction_ref 136343 // activity action Da li korisnik zeli da koristi motorna vozila?
+	end
+      end
+
+      activityaction 136343 "Da li korisnik zeli da koristi motorna vozila?"
+	opaque_action
+	flow 138263 "<flow>"
+	  on activitynode_ref 135703 // decision
+	end
+      end
+
+      activitynode 135703 decision ""
+	flow 138391 "Ne"
+	  on activityaction_ref 136471 // activity action Registracija uspesna
+	end
+
+	flow 139159 "Da"
+	  on activityaction_ref 136599 // activity action Prikaz forme za slanje dokaza o polozenim vozackim kategorijama
+	end
+
+	flow 139287 "Ne"
+	  on activitynode_ref 135959 // merge
+	end
+      end
+
+      activityaction 136471 "Registracija uspesna"
+	opaque_action
+	flow 139031 "<flow>"
+	  on activitynode_ref 135831 // merge
+	end
+      end
+
+      activitynode 135831 merge ""
+	flow 138519 "<flow>"
+	  on activityaction_ref 128279 // activity action Prikaz pocetnog ekrana
+	end
+      end
+
+      activityaction 136599 "Prikaz forme za slanje dokaza o polozenim vozackim kategorijama"
+	opaque_action
+	flow 139415 "<flow>"
+	  on activitynode_ref 135959 // merge
+	end
+      end
+
+      activitynode 135959 merge ""
+	flow 139543 "<flow>"
+	  on activityaction_ref 136471 // activity action Registracija uspesna
+	end
+      end
+
+      activityaction 136727 "Da li korisnik sa unetim podacima vec postoji?"
+	opaque_action
+	flow 139671 "<flow>"
+	  on activitynode_ref 136087 // decision
+	end
+      end
+
+      activitynode 136087 decision ""
+	flow 139799 "Ne"
+	  on activityaction_ref 136215 // activity action Prikaz forme za slanje ocitane licne karte
+	end
+
+	flow 140311 "<flow>"
+	  on activitynode_ref 136215 // merge
+	end
+
+	flow 140439 "Da"
+	  on activityaction_ref 136855 // activity action Prikaz odgovarajuce poruke korisniku
+	end
+      end
+
+      activitynode 136215 merge ""
+	flow 140055 "<flow>"
+	  on activityaction_ref 136087 // activity action Prikaz forme za registraciju i unos osnovnih podataka
+	end
+      end
+
+      activityaction 136855 "Prikaz odgovarajuce poruke korisniku"
+	opaque_action
+	flow 140567 "<flow>"
+	  on activitynode_ref 136215 // merge
+	end
+      end
+
+      activityaction 136983 ""
+	opaque_action
+      end
+    end
+
+    activity 134551 "AktivnostiAdminAplikacije"
     end
   end
 
@@ -1403,7 +1554,7 @@ format 224
     activitydiagramsettings
      end
     classdiagram 134655 "Klase"
-      classdiagramsettings member_max_width 0 end
+      classdiagramsettings draw_all_relations no member_max_width 0 end
       size A2
     end
 
@@ -1871,7 +2022,7 @@ format 224
       end
     end
 
-    class 136831 "KorisnikKotroler"
+    class 136831 "KorisnikKontroler"
       visibility package stereotype "control"
       cpp_decl ""
       java_decl ""
@@ -1939,7 +2090,7 @@ ${members}};
 	relation 134655 -_->
 	  a public
 	    classrelation_ref 134655 // <dependency>
-	  b parent class_ref 136831 // KorisnikKotroler
+	  b parent class_ref 136831 // KorisnikKontroler
       end
     end
 
@@ -2030,6 +2181,205 @@ ${members}};
 	mysql_decl ""
 	MysqlColumn
       end
+    end
+
+    class 128151 "PrikazSvihVozilaSaPrijavljenimOstecenimaForma"
+      visibility package stereotype "boundary"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl "${comment}${abstract}${local}interface ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 128023 "prikazSvihVozilaSaPrijavljenimOstecenima"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 128151 "prikazVozila"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      classrelation 128023 // <dependency>
+	relation 128023 -_->
+	  a public
+	    classrelation_ref 128023 // <dependency>
+	  b parent class_ref 136831 // KorisnikKontroler
+      end
+
+      classrelation 128151 // <dependency>
+	relation 128151 -_->
+	  a public
+	    classrelation_ref 128151 // <dependency>
+	  b parent class_ref 128279 // VoziloKontroler
+      end
+
+      classrelation 128279 // <dependency>
+	relation 128279 -_->
+	  a public
+	    classrelation_ref 128279 // <dependency>
+	  b parent class_ref 128407 // PrikazVozila
+      end
+    end
+
+    class 128279 "VoziloKontroler"
+      visibility package stereotype "control"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 128279 "vratiSvaVozilaSaPrijavljenimOstecenima"
+	public return_type class_ref 135551 // Vozilo
+	multiplicity "*"
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 128407 "vratiPodatkeOVozilu"
+	public return_type class_ref 135551 // Vozilo
+	nparams 1
+	  param in name "id" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 128535 "vratiNeresenaOstecenjaVozila"
+	public return_type class_ref 137215 // Ostecenje
+	multiplicity "*"
+	nparams 1
+	  param in name "idVozila" explicit_type "int"
+	
+	
+	
+	
+	
+      end
+
+      operation 128791 "staviVoziloUPromet"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "id" explicit_type "int"
+	  param in name "status" explicit_type "bool"
+	
+	
+	
+	
+	
+      end
+
+      classrelation 128407 // <dependency>
+	relation 128407 -_->
+	  a public
+	    classrelation_ref 128407 // <dependency>
+	  b parent class_ref 137215 // Ostecenje
+      end
+
+      classrelation 128535 // <dependency>
+	relation 128535 -_->
+	  a public
+	    classrelation_ref 128535 // <dependency>
+	  b parent class_ref 135551 // Vozilo
+      end
+    end
+
+    class 128407 "PrikazVozila"
+      visibility package stereotype "boundary"
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl "${comment}${abstract}${local}interface ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 128663 "odabirDaLiVoziloOstajeUPrometu"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+    end
+  end
+
+  usecaseview 134551 "SequenceDiagram"
+    
+    usecasediagramsettings end
+    
+    sequencediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    activitydiagramsettings
+     end
+    class 128023 "Adminstrator"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    sequencediagram 135063 "PregledOstecenihVozila"
+      sequencediagramsettings instances_drawing_mode class end
+      overlapping_bars size A0
+    end
+
+    class 128535 "Serviser"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
     end
   end
 end

@@ -1,0 +1,5 @@
+format 224
+
+classinstance 128023 class_ref 128023 // Adminstrator
+  drawing_mode actor  name ""   xyz 37 38 2005 life_line_z 2000
+end

@@ -1,14 +1,19 @@
-window_sizes 1800 901 450 1344 717 128
+window_sizes 2400 1271 450 1944 1087 128
 
 diagrams
-  active  activitydiagram_ref 128151 // Login/register flow
-    401 645 100 A4 0 0
+  activitydiagram_ref 128151 // Login/register flow
+    401 645 78 A0 0 0
+  activitydiagram_ref 128279 // Rezervacija vozila
+    114 106 100 A4 0 0
+  classdiagram_ref 134655 // Klase
+    114 106 68 A2 0 0
+  active  sequencediagram_ref 135063 // PregledOstecenihVozila
+    1944 1087 59 A0 0 0
+  usecasediagram_ref 128127 // UseCaseDiagram
+    114 106 100 A2 0 0
 end
 show_stereotypes
-selected usecase_ref 130303 // Obracunavanje plata
+selected usecaseview_ref 134551 // SequenceDiagram
 open
-  usecaseview_ref 128127 // UseCase
-  activityaction_ref 128023 // activity action Unos kredencijala i prijava na sistem
-  activitynode_ref 129047 // activity_final
 end
 end
