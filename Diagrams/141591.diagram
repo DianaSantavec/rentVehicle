@@ -1,0 +1,35 @@
+format 224
+
+packagecanvas 128023 
+  package_ref 134551 // Admin app UI
+    xyzwh 67 78 2000 125 109
+end
+packagecanvas 128151 
+  package_ref 134679 // API
+    xyzwh 399 129 2000 131 105
+end
+packagecanvas 128407 
+  package_ref 134807 // Kontroleri
+    xyzwh 399 308 2000 131 107
+end
+packagecanvas 128663 
+  package_ref 134935 // User app UI
+    xyzwh 64 207 2000 131 117
+end
+packagecanvas 129047 
+  package_ref 135063 // Modeli podataka
+    xyzwh 662 308 2000 131 107
+end
+simplerelationcanvas 128279 simplerelation_ref 134551
+  from ref 128023 z 2001 stereotype "<<access>>" xyz 252 156 3000 to ref 128151
+end
+simplerelationcanvas 128791 simplerelation_ref 134807
+  from ref 128663 z 2001 stereotype "<<access>>" xyz 254 221 3000 to ref 128151
+end
+simplerelationcanvas 128919 simplerelation_ref 134935
+  from ref 128151 z 2001 stereotype "<<import>>" xyz 425.5 270 3000 to ref 128407
+end
+simplerelationcanvas 129175 simplerelation_ref 135063
+  from ref 128407 z 2001 stereotype "<<import>>" xyz 558.5 339.5 3000 to ref 129047
+end
+end

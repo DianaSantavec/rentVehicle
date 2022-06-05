@@ -1,0 +1,45 @@
+format 224
+"Kontroleri" // Kontroleri
+  revision 1
+  modified_by 23 "vindo"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  simplerelation 134679
+    -_->
+      on 
+      package_ref 134679 // API
+  end
+
+  simplerelation 135063
+    -_->
+      stereotype "import"
+      on 
+      package_ref 135063 // Modeli podataka
+  end
+end

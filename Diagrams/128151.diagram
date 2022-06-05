@@ -3,87 +3,87 @@ format 224
 activityactioncanvas 128023 activityaction_ref 128023 // activity action Unos kredencijala i prijava na sistem
   
   show_opaque_action_definition default
-  xyzwh 386.035 571.547 2000 151 57
+  xyzwh 360.195 405.987 2000 209 71
 end
 activitynodecanvas 128151 activitynode_ref 128023 // initial_node
-  xyz 208.565 31.1918 2000
+  xyz 208.085 31.5918 2000
 end
 activityactioncanvas 128279 activityaction_ref 128151 // activity action Ulazak u aplikaciju. Da li je korisnik ulogovan?
   
   show_opaque_action_definition default
-  xyzwh 128.895 180.906 2000 181 71
+  xyzwh 91.975 106.306 2000 263 73
 end
 activitynodecanvas 128407 activitynode_ref 128151 // decision
-  xyz 206.895 358.003 2000
+  xyz 206.975 224.563 2000
 end
 activityactioncanvas 128663 activityaction_ref 128279 // activity action Prikaz pocetnog ekrana
   
   show_opaque_action_definition default
-  xyzwh 412.695 974.639 2000 101 81
+  xyzwh 413.415 732.479 2000 101 81
 end
 activitynodecanvas 129175 activitynode_ref 128279 // activity_final
-  xyz 448.485 1089.72 2000
+  xyz 451.085 842.28 2000
 end
 activitynodecanvas 130071 activitynode_ref 128407 // decision
-  xyz 451.695 712.75 2005
+  xyz 450.975 547.55 2005
 end
 activityactioncanvas 131607 activityaction_ref 135959 // activity action Da li korisnik ima nalog?
   
   show_opaque_action_definition default
-  xyzwh 407.324 343.043 2000 111 73
+  xyzwh 408.044 210.283 2000 111 73
 end
 activitynodecanvas 131863 activitynode_ref 135575 // decision
-  xyz 452.014 459.987 2005
+  xyz 452.854 326.107 2005
 end
 activityactioncanvas 132375 activityaction_ref 136087 // activity action Prikaz forme za registraciju i unos osnovnih podataka
   
   show_opaque_action_definition default
-  xyzwh 1242.06 124.62 2000 147 95
+  xyzwh 794.46 125.38 2000 147 95
 end
 activityactioncanvas 132887 activityaction_ref 136215 // activity action Prikaz forme za slanje ocitane licne karte
   
   show_opaque_action_definition default
-  xyzwh 1046.16 437.58 2000 133 89
+  xyzwh 667.88 435.94 2000 133 89
 end
 activityactioncanvas 133143 activityaction_ref 136343 // activity action Da li korisnik zeli da koristi motorna vozila?
   
   show_opaque_action_definition default
-  xyzwh 1033.56 574.4 2000 145 89
+  xyzwh 660.36 571.48 2000 145 89
 end
 activitynodecanvas 133399 activitynode_ref 135703 // decision
-  xyz 1093.56 727.26 2000
+  xyz 717.36 727.46 2000
 end
 activityactioncanvas 133655 activityaction_ref 136471 // activity action Registracija uspesna
   
   show_opaque_action_definition default
-  xyzwh 826.56 848.44 2000 101 61
+  xyzwh 524.12 849.12 2000 101 61
 end
 activitynodecanvas 133911 activitynode_ref 135831 // merge
-  xyz 448.74 870.56 2000
+  xyz 450.34 661.84 2000
 end
 activityactioncanvas 135703 activityaction_ref 136599 // activity action Prikaz forme za slanje dokaza o polozenim vozackim kategorijama
   
   show_opaque_action_definition default
-  xyzwh 1337.12 692.4 2000 193 105
+  xyzwh 889.6 694.04 2000 193 105
 end
 activitynodecanvas 136343 activitynode_ref 135959 // merge
-  xyz 970.82 859.24 2000
+  xyz 667.74 860.36 2000
 end
 activityactioncanvas 137111 activityaction_ref 136727 // activity action Da li korisnik sa unetim podacima vec postoji?
   
   show_opaque_action_definition default
-  xyzwh 1221.18 259.1 2000 193 81
+  xyzwh 772.7 260.54 2000 193 81
 end
 activitynodecanvas 137367 activitynode_ref 136087 // decision
-  xyz 1305.98 378.12 2000
+  xyz 856.5 378.88 2000
 end
 activitynodecanvas 138007 activitynode_ref 136215 // merge
-  xyz 1303.72 55.8 2000
+  xyz 852.12 56.68 2000
 end
 activityactioncanvas 139543 activityaction_ref 136855 // activity action Prikaz odgovarajuce poruke korisniku
   
   show_opaque_action_definition default
-  xyzwh 1500.7 180.3 2000 167 95
+  xyzwh 1052.18 181.42 2000 167 95
 end
 flowcanvas 128535 flow_ref 128023 // <flow>
   
@@ -98,8 +98,8 @@ end
 flowcanvas 130199 flow_ref 128663 // Neuspesna prijava / neispravni kredencijali
   decenter_begin 405
   
-  from ref 130071 z 2006 label "Neuspesna prijava / neispravni kredencijali" xyz 180 690 2006 to point 174.044 725.76
-  line 130327 z 2006 to point 174.044 597.547
+  from ref 130071 z 2006 label "Neuspesna prijava / neispravni kredencijali" xyz 179 526 2006 to point 172.56 561.12
+  line 130327 z 2006 to point 172.56 433.44
   line 130455 z 2006 to ref 128023
    write_horizontally default
 end
@@ -115,7 +115,7 @@ flowcanvas 131351 flow_ref 137367 // <flow>
 end
 flowcanvas 131735 flow_ref 137495 // Nije
   
-  from ref 128407 z 2001 label "Nije" xyz 312 361.5 3000 to ref 131607
+  from ref 128407 z 2001 label "Nije" xyz 312 228 2001 to ref 131607
    write_horizontally default
 end
 flowcanvas 131991 flow_ref 137623 // <flow>
@@ -125,7 +125,7 @@ flowcanvas 131991 flow_ref 137623 // <flow>
 end
 flowcanvas 132119 flow_ref 137751 // Da
   
-  from ref 131863 z 2006 label "Da" xyz 428.5 520 3000 to ref 128023
+  from ref 131863 z 2006 label "Da" xyz 429.5 370.5 2006 to ref 128023
    write_horizontally default
 end
 flowcanvas 133271 flow_ref 138135 // <flow>
@@ -145,35 +145,36 @@ flowcanvas 134039 flow_ref 138519 // <flow>
 end
 flowcanvas 134423 flow_ref 138647 // Uspesna prijava
   
-  from ref 130071 z 2006 label "Uspesna prijava" xyz 353 788.5 3000 to ref 133911
+  from ref 130071 z 2006 label "Uspesna prijava" xyz 338.5 612.5 2006 to ref 133911
    write_horizontally default
 end
 flowcanvas 134935 flow_ref 138903 // Jeste
   
-  from ref 128407 z 2001 label "Jeste" xyz 112 351 3000 to point 42.24 372.04
-  line 135063 z 2001 to point 39.54 881.98
+  from ref 128407 z 2001 label "Jeste" xyz 112 217 2001 to point 42.64 239.44
+  line 135063 z 2001 to point 38.96 680.48
   line 135191 z 2001 to ref 133911
    write_horizontally default
 end
 flowcanvas 135319 flow_ref 139031 // <flow>
   
-  from ref 133655 z 2001 to ref 133911
+  from ref 133655 z 2001 to point 575 682
+  line 140311 z 2001 to ref 133911
    write_horizontally default
 end
 flowcanvas 135831 flow_ref 139159 // Da
   
-  from ref 133399 z 2001 label "Da" xyz 1217.5 721 3000 to ref 135703
+  from ref 133399 z 2001 label "Da" xyz 805.5 721 2001 to ref 135703
    write_horizontally default
 end
 flowcanvas 136471 flow_ref 139287 // Ne
   
-  from ref 133399 z 2001 label "Ne" xyz 1033 724 3000 to point 980.82 742.84
+  from ref 133399 z 2001 label "Ne" xyz 607 724.5 2001 to point 677.92 743.64
   line 136599 z 2001 to ref 136343
    write_horizontally default
 end
 flowcanvas 136727 flow_ref 139415 // <flow>
   
-  from ref 135703 z 2001 to point 1430.82 870.96
+  from ref 135703 z 2001 to point 981.92 871.32
   line 136855 z 2001 to ref 136343
    write_horizontally default
 end
@@ -189,7 +190,7 @@ flowcanvas 137495 flow_ref 139671 // <flow>
 end
 flowcanvas 137623 flow_ref 139799 // Ne
   
-  from ref 137367 z 2001 label "Ne" xyz 1193.5 369 3000 to point 1108.1 393.5
+  from ref 137367 z 2001 label "Ne" xyz 779.5 367.5 2001 to point 730.6 392.2
   line 139031 z 2001 to ref 132887
    write_horizontally default
 end
@@ -205,20 +206,20 @@ flowcanvas 138135 flow_ref 140055 // <flow>
 end
 flowcanvas 138391 flow_ref 140183 // Ne
   
-  from ref 131863 z 2006 label "Ne" xyz 593 453.5 3000 to point 713.48 477.2
-  line 138647 z 2006 to point 711.84 67.24
+  from ref 131863 z 2006 label "Ne" xyz 583 333.5 2006 to point 713 343
+  line 140183 z 2006 to point 711.28 71.64
   line 138775 z 2006 to ref 138007
    write_horizontally default
 end
 flowcanvas 139671 flow_ref 140439 // Da
   
-  from ref 137367 z 2001 label "Da" xyz 1448 367 3000 to point 1585.4 390.8
+  from ref 137367 z 2001 label "Da" xyz 999 369 2001 to point 1136.72 392.52
   line 139799 z 2001 to ref 139543
    write_horizontally default
 end
 flowcanvas 139927 flow_ref 140567 // <flow>
   
-  from ref 139543 z 2001 to point 1581.7 79.9
+  from ref 139543 z 2001 to point 1135.48 70.36
   line 140055 z 2001 to ref 138007
    write_horizontally default
 end

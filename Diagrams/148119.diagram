@@ -1,0 +1,135 @@
+format 224
+
+fragment 128023 "Klijent (korisnik)"
+  xyzwh 97 29 2000 314 682
+end
+activitynodecanvas 128151 activitynode_ref 149271 // initial_node
+  xyz 233 130 2000
+end
+activityactioncanvas 128279 activityaction_ref 143511 // activity action Klijent zeli da prijavi ostecenje za iznajmljeno vozilo?
+  
+  show_opaque_action_definition default
+  xyzwh 123 217 2000 237 53
+end
+activitynodecanvas 128535 activitynode_ref 149399 // decision
+  xyz 229 338 2000
+end
+activitynodecanvas 128791 activitynode_ref 149527 // activity_final
+  xyz 129 344 2000
+end
+activityactioncanvas 129047 activityaction_ref 143639 // activity action Dodavanje opisa ostecenja
+  
+  show_opaque_action_definition default
+  xyzwh 131 427 2000 225 55
+end
+activityactioncanvas 129559 activityaction_ref 143767 // activity action Ostecenje je dodato
+  
+  show_opaque_action_definition default
+  xyzwh 149 529 2000 190 46
+end
+activityactioncanvas 129815 activityaction_ref 143895 // activity action Prikaz ostecenja u listi ostecenja
+  
+  show_opaque_action_definition default
+  xyzwh 525 113 2000 193 60
+end
+activityactioncanvas 130327 activityaction_ref 144023 // activity action Detaljni prikaz opisa ostecenja
+  
+  show_opaque_action_definition default
+  xyzwh 525 217 2000 185 65
+end
+activityactioncanvas 130583 activityaction_ref 144151 // activity action Da li vozilo ostaje u koriscenju?
+  
+  show_opaque_action_definition default
+  xyzwh 530 335 2000 176 57
+end
+activitynodecanvas 130839 activitynode_ref 149655 // decision
+  xyz 602 439 2000
+end
+activityactioncanvas 131351 activityaction_ref 144279 // activity action Oznacava se da je vozilo u voznom stanju i moguce ga je idalje iznajmljivati
+  
+  show_opaque_action_definition default
+  xyzwh 479 545 2000 268 68
+end
+activitynodecanvas 131607 activitynode_ref 149783 // activity_final
+  xyz 599 678 2000
+end
+activityactioncanvas 131863 activityaction_ref 144407 // activity action Oznacava se da vozilo treba da se povuce iz ponude i da se servisira
+  
+  show_opaque_action_definition default
+  xyzwh 799 422 2000 270 75
+end
+activitynodecanvas 132119 activitynode_ref 149911 // activity_final
+  xyz 920 550 2000
+end
+fragment 132375 "Serviser"
+  xyzwh 464 24 2000 625 692
+end
+flowcanvas 128407 flow_ref 153879 // <flow>
+  
+  from ref 128151 z 2001 to ref 128279
+   write_horizontally default
+end
+flowcanvas 128663 flow_ref 154007 // <flow>
+  
+  from ref 128279 z 2001 to ref 128535
+   write_horizontally default
+end
+flowcanvas 128919 flow_ref 154135 // Ne
+  
+  from ref 128535 z 2001 label "Ne" xyz 184 335.5 3000 to ref 128791
+   write_horizontally default
+end
+flowcanvas 129431 flow_ref 154263 // Da
+  
+  from ref 128535 z 2001 label "Da" xyz 245 388 3000 to ref 129047
+   write_horizontally default
+end
+flowcanvas 129687 flow_ref 154391 // <flow>
+  
+  from ref 129047 z 2001 to ref 129559
+   write_horizontally default
+end
+flowcanvas 129943 flow_ref 154519 // <flow>
+  decenter_end 565
+  
+  from ref 129559 z 2001 to point 427 548
+  line 130071 z 2001 to point 426 143
+  line 130199 z 2001 to ref 129815
+   write_horizontally default
+end
+flowcanvas 130455 flow_ref 154647 // <flow>
+  
+  from ref 129815 z 2001 to ref 130327
+   write_horizontally default
+end
+flowcanvas 130711 flow_ref 154775 // <flow>
+  
+  from ref 130327 z 2001 to ref 130583
+   write_horizontally default
+end
+flowcanvas 130967 flow_ref 154903 // <flow>
+  
+  from ref 130583 z 2001 to ref 130839
+   write_horizontally default
+end
+flowcanvas 131479 flow_ref 155031 // Da
+  
+  from ref 130839 z 2001 label "Da" xyz 586.5 502.5 3000 to ref 131351
+   write_horizontally default
+end
+flowcanvas 131735 flow_ref 155159 // <flow>
+  
+  from ref 131351 z 2001 to ref 131607
+   write_horizontally default
+end
+flowcanvas 131991 flow_ref 155287 // Ne
+  
+  from ref 130839 z 2001 label "Ne" xyz 703 441.5 3000 to ref 131863
+   write_horizontally default
+end
+flowcanvas 132247 flow_ref 155415 // <flow>
+  
+  from ref 131863 z 2001 to ref 132119
+   write_horizontally default
+end
+end

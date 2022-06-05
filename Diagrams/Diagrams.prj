@@ -1,6 +1,6 @@
 format 224
 "Diagrams"
-  revision 8
+  revision 10
   modified_by 23 "vindo"
 
 
@@ -1308,6 +1308,10 @@ format 224
 	flow 129047 "<flow>"
 	  on activityaction_ref 128535 // activity action 
 	end
+
+	flow 147095 "<flow>"
+	  on activitynode_ref 142743 // merge
+	end
       end
 
       activityaction 128535 ""
@@ -1365,11 +1369,15 @@ format 224
 	end
 
 	flow 130199 "Da"
-	  on activityaction_ref 129175 // activity action Odabir prikaza vozila
+	  on activityaction_ref 129175 // activity action Odabir nacina prikaza vozila
+	end
+
+	flow 147351 "Ne"
+	  on activitynode_ref 142743 // merge
 	end
       end
 
-      activityaction 129175 "Odabir prikaza vozila"
+      activityaction 129175 "Odabir nacina prikaza vozila"
 	opaque_action
 	flow 130071 "<flow>"
 	  on activitynode_ref 128663 // decision
@@ -1527,9 +1535,111 @@ format 224
       activityaction 136983 ""
 	opaque_action
       end
+
+      activitynode 142743 merge ""
+	flow 147223 "<flow>"
+	  on activityaction_ref 128919 // activity action Odabir vrste vozila i termina
+	end
+      end
     end
 
     activity 134551 "AktivnostiAdminAplikacije"
+      activitydiagram 148119 "Ostecenje lifecycle"
+	activitydiagramsettings
+	 end
+	size A0
+      end
+
+      activitynode 149271 initial_node ""
+	flow 153879 "<flow>"
+	  on activityaction_ref 143511 // activity action Klijent zeli da prijavi ostecenje za iznajmljeno vozilo?
+	end
+      end
+
+      activityaction 143511 "Klijent zeli da prijavi ostecenje za iznajmljeno vozilo?"
+	opaque_action
+	flow 154007 "<flow>"
+	  on activitynode_ref 149399 // decision
+	end
+      end
+
+      activitynode 149399 decision ""
+	flow 154135 "Ne"
+	  on activitynode_ref 149527 // activity_final
+	end
+
+	flow 154263 "Da"
+	  on activityaction_ref 143639 // activity action Dodavanje opisa ostecenja
+	end
+      end
+
+      activitynode 149527 activity_final ""
+      end
+
+      activityaction 143639 "Dodavanje opisa ostecenja"
+	opaque_action
+	flow 154391 "<flow>"
+	  on activityaction_ref 143767 // activity action Ostecenje je dodato
+	end
+      end
+
+      activityaction 143767 "Ostecenje je dodato"
+	opaque_action
+	flow 154519 "<flow>"
+	  on activityaction_ref 143895 // activity action Prikaz ostecenja u listi ostecenja
+	end
+      end
+
+      activityaction 143895 "Prikaz ostecenja u listi ostecenja"
+	opaque_action
+	flow 154647 "<flow>"
+	  on activityaction_ref 144023 // activity action Detaljni prikaz opisa ostecenja
+	end
+      end
+
+      activityaction 144023 "Detaljni prikaz opisa ostecenja"
+	opaque_action
+	flow 154775 "<flow>"
+	  on activityaction_ref 144151 // activity action Da li vozilo ostaje u koriscenju?
+	end
+      end
+
+      activityaction 144151 "Da li vozilo ostaje u koriscenju?"
+	opaque_action
+	flow 154903 "<flow>"
+	  on activitynode_ref 149655 // decision
+	end
+      end
+
+      activitynode 149655 decision ""
+	flow 155031 "Da"
+	  on activityaction_ref 144279 // activity action Oznacava se da je vozilo u voznom stanju i moguce ga je idalje iznajmljivati
+	end
+
+	flow 155287 "Ne"
+	  on activityaction_ref 144407 // activity action Oznacava se da vozilo treba da se povuce iz ponude i da se servisira
+	end
+      end
+
+      activityaction 144279 "Oznacava se da je vozilo u voznom stanju i moguce ga je idalje iznajmljivati"
+	opaque_action
+	flow 155159 "<flow>"
+	  on activitynode_ref 149783 // activity_final
+	end
+      end
+
+      activitynode 149783 activity_final ""
+      end
+
+      activityaction 144407 "Oznacava se da vozilo treba da se povuce iz ponude i da se servisira"
+	opaque_action
+	flow 155415 "<flow>"
+	  on activitynode_ref 149911 // activity_final
+	end
+      end
+
+      activitynode 149911 activity_final ""
+      end
     end
   end
 
@@ -2330,6 +2440,23 @@ ${members}};
 	
       end
     end
+
+    classdiagram 141591 "DijagramiPaketa"
+      classdiagramsettings draw_all_relations no member_max_width 0 end
+      size A4
+    end
+
+    class 135063 "Mozda"
+      visibility package 
+      cpp_decl ""
+      java_decl ""
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
   end
 
   usecaseview 134551 "SequenceDiagram"
@@ -2382,4 +2509,14 @@ ${members}};
       
     end
   end
+
+  package_ref 134551 // Admin app UI
+
+  package_ref 134679 // API
+
+  package_ref 134807 // Kontroleri
+
+  package_ref 134935 // User app UI
+
+  package_ref 135063 // Modeli podataka
 end

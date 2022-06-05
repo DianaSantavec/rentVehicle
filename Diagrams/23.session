@@ -1,19 +1,23 @@
-window_sizes 2400 1271 450 1944 1087 128
+window_sizes 1920 1001 450 1464 817 128
 
 diagrams
   activitydiagram_ref 128151 // Login/register flow
     401 645 78 A0 0 0
   activitydiagram_ref 128279 // Rezervacija vozila
-    114 106 100 A4 0 0
+    114 106 90 A4 22 0
   classdiagram_ref 134655 // Klase
     114 106 68 A2 0 0
-  active  sequencediagram_ref 135063 // PregledOstecenihVozila
-    1944 1087 59 A0 0 0
+  sequencediagram_ref 135063 // PregledOstecenihVozila
+    1944 1087 57 A0 0 0
   usecasediagram_ref 128127 // UseCaseDiagram
     114 106 100 A2 0 0
+  active  classdiagram_ref 141591 // DijagramiPaketa
+    1464 817 100 A4 0 0
 end
 show_stereotypes
-selected usecaseview_ref 134551 // SequenceDiagram
+selected classview_ref 128127 // DijagramKlasa
 open
+  classview_ref 128127 // DijagramKlasa
+  usecaseview_ref 134551 // SequenceDiagram
 end
 end

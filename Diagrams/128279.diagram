@@ -1,81 +1,68 @@
 format 224
 
 activitynodecanvas 128023 activitynode_ref 128535 // initial_node
-  xyz 465 28 2000
-end
-activityactioncanvas 128151 activityaction_ref 128535 // activity action 
-  
-  show_opaque_action_definition default
-  xyzwh 429 89 2000 100 60
+  xyz 421.777 139.089 2000
 end
 activitynodecanvas 128407 activitynode_ref 128663 // decision
-  xyz 243 603 2000
+  xyz 254.664 603.087 2000
 end
 activityactioncanvas 128663 activityaction_ref 128663 // activity action Prikaz mape sa lokacijom svih dostpunih vozila odabrane vrste
   
   show_opaque_action_definition default
-  xyzwh 47 670 2000 144 90
+  xyzwh 17.643 672.248 2000 227 83
 end
 activityactioncanvas 128791 activityaction_ref 128791 // activity action Prikaz liste svih dostupnih vozila odabrane vrste
   
   show_opaque_action_definition default
-  xyzwh 316 671 2000 145 66
+  xyzwh 282.632 683.858 2000 231 63
 end
 activityactioncanvas 129431 activityaction_ref 128919 // activity action Odabir vrste vozila i termina
   
   show_opaque_action_definition default
-  xyzwh 401 224 2000 151 60
+  xyzwh 307.22 251.365 2000 253 59
 end
 activityactioncanvas 129687 activityaction_ref 129047 // activity action Da li ima slobodnih vozila u odabranom terminu?
   
   show_opaque_action_definition default
-  xyzwh 400 316 2000 157 63
+  xyzwh 301.608 341.501 2000 265 55
 end
 activitynodecanvas 129943 activitynode_ref 128791 // decision
-  xyz 466 432 2000
+  xyz 418.777 433.311 2000
 end
-activityactioncanvas 130711 activityaction_ref 129175 // activity action Odabir prikaza vozila
+activityactioncanvas 130711 activityaction_ref 129175 // activity action Odabir nacina prikaza vozila
   
   show_opaque_action_definition default
-  xyzwh 207 507 2000 100 60
+  xyzwh 142.053 500.926 2000 247 57
 end
 activitynodecanvas 131223 activitynode_ref 128919 // merge
-  xyz 233 783 2000
+  xyz 244.559 782.967 2000
 end
 activityactioncanvas 131863 activityaction_ref 129303 // activity action Odabir konkretnog vozila
   
   show_opaque_action_definition default
-  xyzwh 204 857 2000 100 60
+  xyzwh 579.946 520.745 2000 193 59
 end
 activityactioncanvas 132375 activityaction_ref 129431 // activity action Potvrda rezervacije i rezervacija
   
   show_opaque_action_definition default
-  xyzwh 203 950 2000 100 60
+  xyzwh 568.946 629.505 2000 215 65
 end
 activitynodecanvas 132631 activitynode_ref 129047 // activity_final
-  xyz 238 1055 2000
+  xyz 663.336 758.654 2000
 end
-flowcanvas 128279 flow_ref 129047 // <flow>
-  decenter_end 469
-  
-  from ref 128023 z 2001 to ref 128151
-   write_horizontally default
+activitynodecanvas 132887 activitynode_ref 142743 // merge
+  xyz 418.777 186.388 2000
 end
 flowcanvas 128919 flow_ref 129303 // Mapa
   
-  from ref 128407 z 2001 label "Mapa" xyz 158 601 2001 to point 112 619
+  from ref 128407 z 2001 label "Mapa" xyz 169 601 2001 to point 123.591 619.087
   line 129047 z 2001 to ref 128663
    write_horizontally default
 end
 flowcanvas 129175 flow_ref 129431 // Lista
   
-  from ref 128407 z 2001 label "Lista" xyz 313 601 2001 to point 382 618
+  from ref 128407 z 2001 label "Lista" xyz 324 601 2001 to point 394.411 618.476
   line 129303 z 2001 to ref 128791
-   write_horizontally default
-end
-flowcanvas 129559 flow_ref 129559 // <flow>
-  
-  from ref 128151 z 2001 to ref 129431
    write_horizontally default
 end
 flowcanvas 129815 flow_ref 129687 // <flow>
@@ -88,13 +75,6 @@ flowcanvas 130071 flow_ref 129815 // <flow>
   from ref 129687 z 2001 to ref 129943
    write_horizontally default
 end
-flowcanvas 130199 flow_ref 129943 // Ne
-  
-  from ref 129943 z 2001 label "Ne" xyz 574 431 2001 to point 673 446
-  line 130583 z 2001 to point 674 253
-  line 130455 z 2001 to ref 129431
-   write_horizontally default
-end
 flowcanvas 130839 flow_ref 130071 // <flow>
   
   from ref 130711 z 2001 to ref 128407
@@ -102,25 +82,28 @@ flowcanvas 130839 flow_ref 130071 // <flow>
 end
 flowcanvas 130967 flow_ref 130199 // Da
   
-  from ref 129943 z 2001 label "Da" xyz 350 443 2001 to point 249 448
+  from ref 129943 z 2001 label "Da" xyz 329 431 2001 to point 260.222 448.701
   line 131095 z 2001 to ref 130711
    write_horizontally default
 end
 flowcanvas 131351 flow_ref 130327 // <flow>
   
-  from ref 128663 z 2001 to point 115 799
+  from ref 128663 z 2001 to point 126.422 798.967
   line 131607 z 2001 to ref 131223
    write_horizontally default
 end
 flowcanvas 131479 flow_ref 130455 // <flow>
   
-  from ref 128791 z 2001 to point 385 800
+  from ref 128791 z 2001 to point 396.243 800.578
   line 131735 z 2001 to ref 131223
    write_horizontally default
 end
 flowcanvas 132247 flow_ref 130583 // <flow>
   
-  from ref 131223 z 2001 to ref 131863
+  from ref 131223 z 2001 to point 254.559 835.943
+  line 134039 z 2001 to point 545.199 836.554
+  line 134295 z 2001 to point 538.536 543.693
+  line 134167 z 2001 to ref 131863
    write_horizontally default
 end
 flowcanvas 132503 flow_ref 130711 // <flow>
@@ -131,6 +114,23 @@ end
 flowcanvas 132759 flow_ref 130839 // <flow>
   
   from ref 132375 z 2001 to ref 132631
+   write_horizontally default
+end
+flowcanvas 133015 flow_ref 147095 // <flow>
+  
+  from ref 128023 z 2001 to ref 132887
+   write_horizontally default
+end
+flowcanvas 133143 flow_ref 147223 // <flow>
+  
+  from ref 132887 z 2001 to ref 129431
+   write_horizontally default
+end
+flowcanvas 133271 flow_ref 147351 // Ne
+  
+  from ref 129943 z 2001 label "Ne" xyz 575 431.5 3000 to point 721.637 448.701
+  line 133783 z 2001 to point 718.806 204.803
+  line 133655 z 2001 to ref 132887
    write_horizontally default
 end
 end
