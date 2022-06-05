@@ -1,271 +1,271 @@
 format 224
 
 classinstance 128023 class_ref 128535 // Serviser
-  drawing_mode actor  name ""   xyz 33.4648 10.2214 2005 life_line_z 2000
+  drawing_mode actor  name ""   xyz 33.3018 10.2075 2005 life_line_z 2000
 classinstance 128151 class_ref 128151 // PrikazSvihVozilaSaPrijavljenimOstecenimaForma
-  name ""   xyz 120.851 13.2435 2010 life_line_z 2000
+  name ""   xyz 98.0217 15.8729 2010 life_line_z 2000
 classinstance 128279 class_ref 128407 // PrikazVozila
-  name ""   xyz 505.414 16.6063 2005 life_line_z 2000
+  name ""   xyz 447.01 15.8215 2005 life_line_z 2000
 classinstance 128407 class_ref 128279 // VoziloKontroler
-  name ""   xyz 661.972 15.947 2005 life_line_z 2000
+  name ""   xyz 604.762 16.7379 2005 life_line_z 2000
 classinstance 129303 class_ref 135551 // Vozilo
-  name ""   xyz 957.26 107.27 2005 life_line_z 2000
+  name ""   xyz 828.32 107.181 2005 life_line_z 2000
 classinstance 133271 class_ref 137215 // Ostecenje
-  name ""   xyz 1083.3 122.381 2005 life_line_z 2000
+  name ""   xyz 952.858 121.261 2005 life_line_z 2000
 fragment 136855 "loop"
   refer sequencediagram_ref 135063 // PregledOstecenihVozila
-  form "imaJosVozilaSaPrijavljenimOstecenjima" xyzwh 17.4714 486.451 2000 1177 1140
+  form "imaJosVozilaSaPrijavljenimOstecenjima" xyzwh 13.2455 386.501 2000 1044 974
 end
 durationcanvas 128535 classinstance_ref 128023 // :Serviser
-  xyzwh 59 117.678 2010 11 40
+  xyzwh 59 113.512 2010 11 44
 end
 durationcanvas 128663 classinstance_ref 128151 // :PrikazSvihVozilaSaPrijavljenimOstecenimaForma
-  xyzwh 290 118.293 2010 11 25
+  xyzwh 266 113.931 2010 11 29
 end
 durationcanvas 128919 classinstance_ref 128151 // :PrikazSvihVozilaSaPrijavljenimOstecenimaForma
-  xyzwh 290 170.735 2010 11 40
+  xyzwh 266 165.95 2010 11 44
 end
 durationcanvas 129047 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 714 171.35 2010 11 25
+  xyzwh 656 166.261 2010 11 29
 end
 durationcanvas 129431 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 715 211.704 2010 11 40
+  xyzwh 656 208.335 2010 11 44
 end
 durationcanvas 129559 classinstance_ref 129303 // :Vozilo
-  xyzwh 979 212.319 2010 11 25
+  xyzwh 850 207.507 2010 11 29
 end
 durationcanvas 129815 classinstance_ref 129303 // :Vozilo
-  xyzwh 979 281.214 2010 11 40
+  xyzwh 850 275.553 2010 11 44
 end
 durationcanvas 129943 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 715 281.829 2010 11 25
+  xyzwh 656 277.193 2010 11 30
 end
 durationcanvas 130199 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 715 334.271 2010 11 40
+  xyzwh 656 328.394 2010 11 46
 end
 durationcanvas 130327 classinstance_ref 128151 // :PrikazSvihVozilaSaPrijavljenimOstecenimaForma
-  xyzwh 290 334.886 2010 11 25
+  xyzwh 265 330.294 2010 11 31
 end
 durationcanvas 130583 classinstance_ref 128023 // :Serviser
-  xyzwh 59 604.263 2010 11 40
+  xyzwh 60 452.167 2010 11 44
 end
 durationcanvas 130711 classinstance_ref 128151 // :PrikazSvihVozilaSaPrijavljenimOstecenimaForma
-  xyzwh 290 604.878 2010 11 25
+  xyzwh 265 450.741 2010 11 29
 end
 durationcanvas 130967 classinstance_ref 128151 // :PrikazSvihVozilaSaPrijavljenimOstecenimaForma
-  xyzwh 290 663.365 2010 11 40
+  xyzwh 266 508.51 2010 11 44
 end
 durationcanvas 131095 classinstance_ref 128279 // :PrikazVozila
-  xyzwh 547 663.98 2010 11 25
+  xyzwh 490 508.626 2010 11 31
 end
 durationcanvas 131351 classinstance_ref 128279 // :PrikazVozila
-  xyzwh 547 710.72 2010 11 40
+  xyzwh 490 559.356 2010 11 44
 end
 durationcanvas 131479 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 715 711.335 2010 11 25
+  xyzwh 656 558.787 2010 11 31
 end
 durationcanvas 131735 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 714 751.348 2010 11 40
+  xyzwh 656 598.078 2010 11 46
 end
 durationcanvas 131863 classinstance_ref 129303 // :Vozilo
-  xyzwh 979 751.963 2010 11 25
+  xyzwh 850 596.14 2010 11 31
 end
 durationcanvas 132119 classinstance_ref 129303 // :Vozilo
-  xyzwh 979 813.472 2010 11 40
+  xyzwh 850 660.983 2010 11 44
 end
 durationcanvas 132247 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 714 813.087 2010 11 25
+  xyzwh 656 658.556 2010 11 31
 end
 durationcanvas 132503 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 715 869.893 2010 11 40
+  xyzwh 656 717.982 2010 11 44
 end
 durationcanvas 132631 classinstance_ref 128279 // :PrikazVozila
-  xyzwh 547 870.508 2010 11 25
+  xyzwh 490 716.535 2010 11 32
 end
 durationcanvas 132887 classinstance_ref 128279 // :PrikazVozila
-  xyzwh 547 925.313 2010 11 43
+  xyzwh 490 773.251 2010 11 48
 end
 durationcanvas 133015 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 715 924.588 2010 11 28
+  xyzwh 656 772.676 2010 11 31
 end
 durationcanvas 133399 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 715 974.668 2010 11 40
+  xyzwh 656 824.325 2010 11 44
 end
 durationcanvas 133527 classinstance_ref 133271 // :Ostecenje
-  xyzwh 1121 975.283 2010 11 25
+  xyzwh 988 823.865 2010 11 29
 end
 durationcanvas 133783 classinstance_ref 133271 // :Ostecenje
-  xyzwh 1120 1038.13 2010 11 40
+  xyzwh 988 886.145 2010 11 46
 end
 durationcanvas 133911 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 714 1038.75 2010 11 25
+  xyzwh 656 883.952 2010 11 31
 end
 durationcanvas 134167 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 714 1092.87 2010 11 40
+  xyzwh 656 939.795 2010 11 44
 end
 durationcanvas 134295 classinstance_ref 128279 // :PrikazVozila
-  xyzwh 547 1093.49 2010 11 25
+  xyzwh 490 939.985 2010 11 31
 end
 durationcanvas 134551 classinstance_ref 128023 // :Serviser
-  xyzwh 60 1156.34 2010 11 40
+  xyzwh 59 1002.99 2010 11 45
 end
 durationcanvas 134679 classinstance_ref 128279 // :PrikazVozila
-  xyzwh 547 1156.95 2010 11 25
+  xyzwh 490 1003.63 2010 11 31
 end
 durationcanvas 134935 classinstance_ref 128279 // :PrikazVozila
-  xyzwh 547 1203.35 2010 11 40
+  xyzwh 490 1050.03 2010 11 44
 end
 durationcanvas 135063 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 715 1203.96 2010 11 25
+  xyzwh 656 1047.61 2010 11 31
 end
 durationcanvas 135319 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 714 1253.39 2010 11 40
+  xyzwh 656 1100.34 2010 11 44
 end
 durationcanvas 135447 classinstance_ref 129303 // :Vozilo
-  xyzwh 979 1253 2010 11 25
+  xyzwh 850 1098.44 2010 11 31
 end
 durationcanvas 135703 classinstance_ref 129303 // :Vozilo
-  xyzwh 979 1317.19 2010 11 40
+  xyzwh 850 1165.47 2010 11 46
 end
 durationcanvas 135831 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 715 1317.81 2010 11 25
+  xyzwh 656 1164.31 2010 11 31
 end
 durationcanvas 136087 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 714 1388.38 2010 11 40
+  xyzwh 656 1219.46 2010 11 46
 end
 durationcanvas 136215 classinstance_ref 128279 // :PrikazVozila
-  xyzwh 547 1389 2010 11 25
+  xyzwh 490 1216.1 2010 11 33
 end
 durationcanvas 136471 classinstance_ref 128279 // :PrikazVozila
-  xyzwh 547 1452.53 2010 11 40
+  xyzwh 490 1282.57 2010 11 61
 end
 durationcanvas 136599 classinstance_ref 128151 // :PrikazSvihVozilaSaPrijavljenimOstecenimaForma
-  xyzwh 290 1453.14 2010 11 25
+  xyzwh 266 1282.82 2010 11 29
 end
 msg 128791 synchronous
   from durationcanvas_ref 128535
   to durationcanvas_ref 128663
   yz 118 2015 explicitmsg "otvori()"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 158 101
+  label_xy 137 100
 msg 129175 synchronous
   from durationcanvas_ref 128919
   to durationcanvas_ref 129047
-  yz 171 2015 msg operation_ref 128279 // "vratiSvaVozilaSaPrijavljenimOstecenima() : Vozilo [*]"
+  yz 172 2015 msg operation_ref 128279 // "vratiSvaVozilaSaPrijavljenimOstecenima() : Vozilo [*]"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 370 154
+  label_xy 348 154
 msg 129687 synchronous
   from durationcanvas_ref 129431
   to durationcanvas_ref 129559
-  yz 212 2015 explicitmsg "create()"
+  yz 213 2015 explicitmsg "create()"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 793 193
+  label_xy 735 193
 msg 130071 return
   from durationcanvas_ref 129815
   to durationcanvas_ref 129943
-  yz 281 2015 explicitmsg "void"
+  yz 280 2015 explicitmsg "void"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 805 264
+  label_xy 746 264
 msg 130455 return
   from durationcanvas_ref 130199
   to durationcanvas_ref 130327
   yz 334 2015 explicitmsg "vozila"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 490 317
+  label_xy 411 316
 msg 130839 synchronous
   from durationcanvas_ref 130583
   to durationcanvas_ref 130711
-  yz 604 2015 msg operation_ref 128151 // "prikazVozila()"
+  yz 457 2015 msg operation_ref 128151 // "prikazVozila()"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 134 587
+  label_xy 113 439
 msg 131223 synchronous
   from durationcanvas_ref 130967
   to durationcanvas_ref 131095
-  yz 663 2015 explicitmsg "otvori()"
+  yz 515 2015 explicitmsg "otvori()"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 401 646
+  label_xy 380 498
 msg 131607 synchronous
   from durationcanvas_ref 131351
   to durationcanvas_ref 131479
-  yz 711 2015 msg operation_ref 128407 // "vratiPodatkeOVozilu(in id : int) : Vozilo"
+  yz 563 2015 msg operation_ref 128407 // "vratiPodatkeOVozilu(in id : int) : Vozilo"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 563 694
+  label_xy 505 547
 msg 131991 synchronous
   from durationcanvas_ref 131735
   to durationcanvas_ref 131863
-  yz 751 2015 explicitmsg "create()"
+  yz 601 2015 explicitmsg "create()"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 800 733
+  label_xy 741 587
 msg 132375 return
   from durationcanvas_ref 132119
   to durationcanvas_ref 132247
-  yz 813 2015 explicitmsg "void"
+  yz 664 2015 explicitmsg "void"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 805 795
+  label_xy 746 646
 msg 132759 return
   from durationcanvas_ref 132503
   to durationcanvas_ref 132631
-  yz 870 2015 explicitmsg "vozilo"
+  yz 722 2015 explicitmsg "vozilo"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 616 853
+  label_xy 559 705
 msg 133143 synchronous
   from durationcanvas_ref 132887
   to durationcanvas_ref 133015
-  yz 925 2015 msg operation_ref 128535 // "vratiNeresenaOstecenjaVozila(in idVozila : int) : Ostecenje [*]"
+  yz 777 2015 msg operation_ref 128535 // "vratiNeresenaOstecenjaVozila(in idVozila : int) : Ostecenje [*]"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 530 908
+  label_xy 437 757
 msg 133655 synchronous
   from durationcanvas_ref 133399
   to durationcanvas_ref 133527
-  yz 975 2015 explicitmsg "create()"
+  yz 827 2015 explicitmsg "create()"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 784 958
+  label_xy 727 811
 msg 134039 return
   from durationcanvas_ref 133783
   to durationcanvas_ref 133911
-  yz 1038 2015 explicitmsg "void"
+  yz 890 2015 explicitmsg "void"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 796 1021
+  label_xy 738 874
 msg 134423 return
   from durationcanvas_ref 134167
   to durationcanvas_ref 134295
-  yz 1093 2015 explicitmsg "ostecenja"
+  yz 945 2015 explicitmsg "ostecenja"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 603 1076
+  label_xy 545 929
 msg 134807 synchronous
   from durationcanvas_ref 134551
   to durationcanvas_ref 134679
-  yz 1156 2015 msg operation_ref 128663 // "odabirDaLiVoziloOstajeUPrometu()"
+  yz 1007 2015 msg operation_ref 128663 // "odabirDaLiVoziloOstajeUPrometu()"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 190 1139
+  label_xy 170 991
 msg 135191 synchronous
   from durationcanvas_ref 134935
   to durationcanvas_ref 135063
-  yz 1203 2015 msg operation_ref 128791 // "staviVoziloUPromet(in id : int, in status : bool)"
+  yz 1056 2015 msg operation_ref 128791 // "staviVoziloUPromet(in id : int, in status : bool)"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 565 1186
+  label_xy 508 1038
 msg 135575 synchronous
   from durationcanvas_ref 135319
   to durationcanvas_ref 135447
-  yz 1253 2015 explicitmsg "promeniDaLiJeVoziloUPrometu()"
+  yz 1106 2015 explicitmsg "promeniDaLiJeVoziloUPrometu()"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 736 1234
+  label_xy 679 1087
 msg 135959 return
   from durationcanvas_ref 135703
   to durationcanvas_ref 135831
-  yz 1317 2015 explicitmsg "void"
+  yz 1168 2015 explicitmsg "void"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 837 1300
+  label_xy 779 1154
 msg 136343 return
   from durationcanvas_ref 136087
   to durationcanvas_ref 136215
-  yz 1388 2015 explicitmsg "bool"
+  yz 1222 2015 explicitmsg "bool"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 621 1371
+  label_xy 564 1205
 msg 136727 return
   from durationcanvas_ref 136471
   to durationcanvas_ref 136599
-  yz 1453 2015 explicitmsg "void"
+  yz 1288 2015 explicitmsg "void"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 410 1436
+  label_xy 388 1270
 end
