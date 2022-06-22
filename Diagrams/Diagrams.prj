@@ -1,7 +1,7 @@
 format 224
-"Diagrams"
-  revision 11
-  modified_by 23 "vindo"
+"Ispravljeno"
+  revision 12
+  modified_by 77 "centar"
 
 
   
@@ -14,7 +14,7 @@ format 224
   
   usecasediagramsettings package_name_in_tab no show_context_mode no auto_label_position yes draw_all_relations yes class_drawing_mode actor shadow yes gradient none show_stereotype_properties no end
   
-  sequencediagramsettings show_full_operations_definition no show_class_of_operation no write_horizontally yes instances_drawing_mode natural drawing_language uml draw_all_relations yes shadow yes gradient none show_stereotype_properties no show_class_context_mode no show_msg_context_mode no end
+  sequencediagramsettings show_full_operations_definition no show_class_of_operation no write_horizontally yes instances_drawing_mode class drawing_language uml draw_all_relations yes shadow yes gradient none show_stereotype_properties no show_class_context_mode no show_msg_context_mode no end
   
   collaborationdiagramsettings show_full_operations_definition no show_class_of_operation no show_hierarchical_rank no write_horizontally yes instances_drawing_mode natural drawing_language uml package_name_in_tab no show_class_pack_context_mode no show_msg_context_mode no draw_all_relations yes shadow yes gradient none show_stereotype_properties no end
   
@@ -2896,6 +2896,94 @@ ${members}};
       explicit_switch_type ""
       mysql_decl ""
       
+    end
+
+    sequencediagram 128077 "RegistracijaKorisnika"
+      sequencediagramsettings end
+      overlapping_bars size A1
+    end
+
+    classinstance 128077 "RegistracijaForma"
+      type class_ref 141591 // RegistracijaForma
+      attributes
+        end
+      relations
+        end
+    end
+
+    class 128077 "KoriisnikKlasa"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+    end
+
+    classinstance 128205 "Korisnik"
+      type class_ref 128077 // KoriisnikKlasa
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 128333 "F1"
+      type class_ref 141847 // LicniPForma
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 128461 "F2"
+      type class_ref 141719 // DokumentForma
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 128589 "Kontr"
+      type class_ref 142103 // RezervacijaKontroler
+      attributes
+        end
+      relations
+        end
+    end
+
+    sequencediagram 128205 "RezervacijaGoriva"
+      sequencediagramsettings end
+      overlapping_bars size A2
+    end
+
+    classinstance 128717 "RezervacijaForma"
+      type class_ref 141975 // RezervacijaForma
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 128845 "FormaPrikaz"
+      type class_ref 142231 // IzborForma
+      attributes
+        end
+      relations
+        end
+    end
+
+    classinstance 128973 "Vozilo"
+      type class_ref 136319 // VozacKlasa
+      attributes
+        end
+      relations
+        end
     end
   end
 

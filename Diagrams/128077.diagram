@@ -1,0 +1,203 @@
+format 224
+
+classinstance 128077 class_ref 128127 // Korisnik
+  drawing_mode actor  name ""   xyz 34 27 2005 life_line_z 2000
+classinstancecanvas 128205 classinstance_ref 128077 // RegistracijaForma
+  xyz 118 26 2010 life_line_z 2000
+end
+classinstancecanvas 128717 classinstance_ref 128205 // Korisnik
+  xyz 294 83 2015 life_line_z 2000
+end
+classinstancecanvas 128845 classinstance_ref 128333 // F1
+  xyz 455 23 2015 life_line_z 2000
+end
+classinstancecanvas 130509 classinstance_ref 128461 // F2
+  xyz 594 19 2020 life_line_z 2000
+end
+classinstancecanvas 132941 classinstance_ref 128589 // Kontr
+  xyz 747 17 2025 life_line_z 2000
+end
+classinstancecanvas 133453 classinstance_ref 128205 // Korisnik
+  xyz 932 803 2030 life_line_z 2000
+end
+durationcanvas 128333 classinstance_ref 128077 // :Korisnik
+  xyzwh 59 144 2010 11 40
+end
+durationcanvas 128461 classinstance_ref 128205 // RegistracijaForma:RegistracijaForma
+  xyzwh 242 144 2010 11 25
+end
+durationcanvas 128973 classinstance_ref 128205 // RegistracijaForma:RegistracijaForma
+  xyzwh 242 180 2010 11 40
+end
+durationcanvas 129101 classinstance_ref 128845 // F1:LicniPForma
+  xyzwh 509 180 2010 11 25
+end
+durationcanvas 129357 classinstance_ref 128077 // :Korisnik
+  xyzwh 59 270 2010 11 40
+end
+durationcanvas 129485 classinstance_ref 128845 // F1:LicniPForma
+  xyzwh 509 270 2010 11 25
+end
+durationcanvas 129741 classinstance_ref 128845 // F1:LicniPForma
+  xyzwh 509 313 2010 11 30
+end
+durationcanvas 129869 classinstance_ref 128205 // RegistracijaForma:RegistracijaForma
+  xyzwh 242 313 2010 11 28
+end
+durationcanvas 130125 classinstance_ref 128077 // :Korisnik
+  xyzwh 59 422 2010 11 40
+end
+durationcanvas 130253 classinstance_ref 128205 // RegistracijaForma:RegistracijaForma
+  xyzwh 242 422 2010 11 25
+end
+durationcanvas 130637 classinstance_ref 128205 // RegistracijaForma:RegistracijaForma
+  xyzwh 242 473 2010 11 40
+end
+durationcanvas 130765 classinstance_ref 130509 // F2:DokumentForma
+  xyzwh 661 473 2010 11 25
+end
+durationcanvas 131021 classinstance_ref 128077 // :Korisnik
+  xyzwh 59 582 2010 11 40
+end
+durationcanvas 131149 classinstance_ref 130509 // F2:DokumentForma
+  xyzwh 661 582 2010 11 25
+end
+durationcanvas 131405 classinstance_ref 130509 // F2:DokumentForma
+  xyzwh 661 638 2010 11 40
+end
+durationcanvas 131533 classinstance_ref 128205 // RegistracijaForma:RegistracijaForma
+  xyzwh 242 638 2010 11 25
+end
+durationcanvas 131789 classinstance_ref 128077 // :Korisnik
+  xyzwh 59 733 2010 11 40
+end
+durationcanvas 131917 classinstance_ref 130509 // F2:DokumentForma
+  xyzwh 661 733 2010 11 25
+end
+durationcanvas 132173 classinstance_ref 130509 // F2:DokumentForma
+  xyzwh 661 789 2010 11 40
+end
+durationcanvas 132301 classinstance_ref 128205 // RegistracijaForma:RegistracijaForma
+  xyzwh 242 789 2010 11 25
+end
+durationcanvas 132557 classinstance_ref 128077 // :Korisnik
+  xyzwh 59 880 2010 11 40
+end
+durationcanvas 132685 classinstance_ref 128205 // RegistracijaForma:RegistracijaForma
+  xyzwh 242 880 2010 11 25
+end
+durationcanvas 133069 classinstance_ref 128205 // RegistracijaForma:RegistracijaForma
+  xyzwh 242 935 2010 11 40
+end
+durationcanvas 133197 classinstance_ref 132941 // Kontr:RezervacijaKontroler
+  xyzwh 836 935 2010 11 25
+end
+durationcanvas 133581 classinstance_ref 132941 // Kontr:RezervacijaKontroler
+  xyzwh 836 1005 2010 11 40
+end
+durationcanvas 133709 classinstance_ref 133453 // Korisnik:KoriisnikKlasa
+  xyzwh 1008 1005 2010 11 25
+end
+durationcanvas 133965 classinstance_ref 133453 // Korisnik:KoriisnikKlasa
+  xyzwh 1008 1064 2010 11 40
+end
+durationcanvas 134093 classinstance_ref 132941 // Kontr:RezervacijaKontroler
+  xyzwh 836 1064 2010 11 25
+end
+durationcanvas 134349 classinstance_ref 132941 // Kontr:RezervacijaKontroler
+  xyzwh 836 1139 2010 11 40
+end
+durationcanvas 134477 classinstance_ref 128205 // RegistracijaForma:RegistracijaForma
+  xyzwh 242 1139 2010 11 25
+end
+msg 128589 synchronous
+  from durationcanvas_ref 128333
+  to durationcanvas_ref 128461
+  yz 144 2015 msg operation_ref 135319 // "unesiLicnePodatke()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 89 127
+msg 129229 synchronous
+  from durationcanvas_ref 128973
+  to durationcanvas_ref 129101
+  yz 180 2015 explicitmsg "otvori()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 359 163
+msg 129613 synchronous
+  from durationcanvas_ref 129357
+  to durationcanvas_ref 129485
+  yz 270 2015 msg operation_ref 135959 // "unesiPodatke()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 240 253
+msg 129997 return
+  from durationcanvas_ref 129741
+  to durationcanvas_ref 129869
+  yz 325 2015 explicitmsg "podaci"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 360 308
+msg 130381 synchronous
+  from durationcanvas_ref 130125
+  to durationcanvas_ref 130253
+  yz 422 2015 msg operation_ref 135447 // "predajDokumenta()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 93 405
+msg 130893 synchronous
+  from durationcanvas_ref 130637
+  to durationcanvas_ref 130765
+  yz 473 2015 explicitmsg "otvori()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 435 456
+msg 131277 synchronous
+  from durationcanvas_ref 131021
+  to durationcanvas_ref 131149
+  yz 582 2015 msg operation_ref 135703 // "priloziLicnu()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 323 565
+msg 131661 return
+  from durationcanvas_ref 131405
+  to durationcanvas_ref 131533
+  yz 638 2015 explicitmsg "licna"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 442 621
+msg 132045 synchronous
+  from durationcanvas_ref 131789
+  to durationcanvas_ref 131917
+  yz 733 2015 unspecifiedmsg
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+msg 132429 return
+  from durationcanvas_ref 132173
+  to durationcanvas_ref 132301
+  yz 789 2015 explicitmsg "vozacka"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 430 772
+msg 132813 synchronous
+  from durationcanvas_ref 132557
+  to durationcanvas_ref 132685
+  yz 880 2015 msg operation_ref 135575 // "sacuvaj()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 126 863
+msg 133325 synchronous
+  from durationcanvas_ref 133069
+  to durationcanvas_ref 133197
+  yz 935 2015 msg operation_ref 128127 // "registrujKorisnika(in ime : string, in preimze : string, in jmbg : string, in brojLicneKarte_Pasosa : string) : bool"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 483 918
+msg 133837 synchronous
+  from durationcanvas_ref 133581
+  to durationcanvas_ref 133709
+  yz 1005 2015 explicitmsg "kreiraj()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 903 988
+msg 134221 return
+  from durationcanvas_ref 133965
+  to durationcanvas_ref 134093
+  yz 1064 2015 explicitmsg "void"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 914 1047
+msg 134605 return
+  from durationcanvas_ref 134349
+  to durationcanvas_ref 134477
+  yz 1139 2015 explicitmsg "korisnik"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 520 1122
+preferred_whz 0 0 1
+end

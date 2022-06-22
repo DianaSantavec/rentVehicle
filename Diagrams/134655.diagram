@@ -134,7 +134,7 @@ relationcanvas 129943 relation_ref 135319 // <association>
 end
 relationcanvas 130175 relation_ref 134783 // <dependency>
   decenter_end 296
-  from ref 129791 z 2001 to point 765.537 841.379
+  from ref 129791 z 2001 to point 765 841
   line 132375 z 2001 to ref 128895
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b

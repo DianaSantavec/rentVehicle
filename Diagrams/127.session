@@ -1,11 +1,14 @@
-window_sizes 2560 1410 450 2104 1262 96
+window_sizes 1920 1080 450 1464 932 96
 cleanlooks_style
 diagrams
   active  usecasediagram_ref 128127 // UseCaseDiagram
-    2098 1236 180 A2 384 945
+    2098 1236 140 A2 444 0
 end
 show_stereotypes
+selected classinstance_ref 128589 // Kontr
 open
   usecase_ref 128127 // Rezervacija vozila
+  usecaseview_ref 128023 // DiagramiAktivnosti
+  usecaseview_ref 134551 // SequenceDiagram
 end
 end

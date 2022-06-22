@@ -1,0 +1,202 @@
+format 224
+
+classinstance 128077 class_ref 128127 // Korisnik
+  drawing_mode actor  name ""   xyz 25 38 2005 life_line_z 2000
+classinstancecanvas 128205 classinstance_ref 128717 // RezervacijaForma
+  xyz 114 41 2010 life_line_z 2000
+end
+classinstancecanvas 129485 classinstance_ref 128845 // FormaPrikaz
+  xyz 390 39 2015 life_line_z 2000
+end
+classinstancecanvas 129997 classinstance_ref 128589 // Kontr
+  xyz 583 37 2020 life_line_z 2000
+end
+classinstancecanvas 130509 classinstance_ref 128973 // Vozilo
+  xyz 747 279 2025 life_line_z 2000
+end
+fragment 132045 "alt"
+  refer activitydiagram_ref 128279 // Rezervacija vozila
+  form "Ukoliko korisnik odaber mapu" xyzwh 20 654 2020 884 139
+end
+fragment 132557 "alt"
+  refer activitydiagram_ref 128279 // Rezervacija vozila
+  form "Ako korisnik odaber listu" xyzwh 19 826 2020 870 151
+end
+durationcanvas 128333 classinstance_ref 128077 // :Korisnik
+  xyzwh 50 147 2010 11 40
+end
+durationcanvas 128461 classinstance_ref 128205 // RezervacijaForma:RezervacijaForma
+  xyzwh 238 147 2010 11 25
+end
+durationcanvas 128717 classinstance_ref 128077 // :Korisnik
+  xyzwh 50 211 2010 11 40
+end
+durationcanvas 128845 classinstance_ref 128205 // RezervacijaForma:RezervacijaForma
+  xyzwh 238 211 2010 11 25
+end
+durationcanvas 129101 classinstance_ref 128077 // :Korisnik
+  xyzwh 50 282 2010 11 40
+end
+durationcanvas 129229 classinstance_ref 128205 // RezervacijaForma:RezervacijaForma
+  xyzwh 238 282 2010 11 25
+end
+durationcanvas 129613 classinstance_ref 128205 // RezervacijaForma:RezervacijaForma
+  xyzwh 238 339 2010 11 40
+end
+durationcanvas 129741 classinstance_ref 129485 // FormaPrikaz:IzborForma
+  xyzwh 474 339 2010 11 25
+end
+durationcanvas 130125 classinstance_ref 129485 // FormaPrikaz:IzborForma
+  xyzwh 474 406 2010 11 40
+end
+durationcanvas 130253 classinstance_ref 129997 // Kontr:RezervacijaKontroler
+  xyzwh 672 406 2010 11 25
+end
+durationcanvas 130637 classinstance_ref 129997 // Kontr:RezervacijaKontroler
+  xyzwh 672 459 2010 11 66
+end
+durationcanvas 130765 classinstance_ref 130509 // Vozilo:VozacKlasa
+  xyzwh 808 459 2010 11 25
+end
+durationcanvas 131021 classinstance_ref 130509 // Vozilo:VozacKlasa
+  xyzwh 808 514 2010 11 40
+end
+durationcanvas 131277 classinstance_ref 129997 // Kontr:RezervacijaKontroler
+  xyzwh 672 593 2010 11 40
+end
+durationcanvas 131405 classinstance_ref 129485 // FormaPrikaz:IzborForma
+  xyzwh 474 593 2010 11 25
+end
+durationcanvas 131661 classinstance_ref 128077 // :Korisnik
+  xyzwh 50 732 2010 11 40
+end
+durationcanvas 131789 classinstance_ref 129485 // FormaPrikaz:IzborForma
+  xyzwh 474 732 2010 11 25
+end
+durationcanvas 132173 classinstance_ref 128077 // :Korisnik
+  xyzwh 50 915 2010 11 40
+end
+durationcanvas 132301 classinstance_ref 129485 // FormaPrikaz:IzborForma
+  xyzwh 474 915 2010 11 25
+end
+durationcanvas 132685 classinstance_ref 128077 // :Korisnik
+  xyzwh 50 1082 2010 11 40
+end
+durationcanvas 132813 classinstance_ref 129485 // FormaPrikaz:IzborForma
+  xyzwh 474 1082 2010 11 25
+end
+durationcanvas 133069 classinstance_ref 129485 // FormaPrikaz:IzborForma
+  xyzwh 474 1138 2010 11 40
+end
+durationcanvas 133197 classinstance_ref 128205 // RezervacijaForma:RezervacijaForma
+  xyzwh 238 1138 2010 11 25
+end
+durationcanvas 133453 classinstance_ref 128077 // :Korisnik
+  xyzwh 50 1254 2010 11 40
+end
+durationcanvas 133581 classinstance_ref 128205 // RezervacijaForma:RezervacijaForma
+  xyzwh 238 1254 2010 11 25
+end
+durationcanvas 133837 classinstance_ref 128205 // RezervacijaForma:RezervacijaForma
+  xyzwh 238 1315 2010 11 40
+end
+durationcanvas 133965 classinstance_ref 129997 // Kontr:RezervacijaKontroler
+  xyzwh 672 1315 2010 11 25
+end
+durationcanvas 134221 classinstance_ref 129997 // Kontr:RezervacijaKontroler
+  xyzwh 672 1369 2010 11 40
+end
+durationcanvas 134349 classinstance_ref 128205 // RezervacijaForma:RezervacijaForma
+  xyzwh 238 1369 2010 11 25
+end
+msg 128589 synchronous
+  from durationcanvas_ref 128333
+  to durationcanvas_ref 128461
+  yz 147 2015 msg operation_ref 136087 // "unesiVreme()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 105 130
+msg 128973 synchronous
+  from durationcanvas_ref 128717
+  to durationcanvas_ref 128845
+  yz 211 2015 msg operation_ref 136215 // "izaberiTipVozila()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 93 194
+msg 129357 synchronous
+  from durationcanvas_ref 129101
+  to durationcanvas_ref 129229
+  yz 282 2015 msg operation_ref 136343 // "pretrazi()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 120 265
+msg 129869 synchronous
+  from durationcanvas_ref 129613
+  to durationcanvas_ref 129741
+  yz 339 2015 explicitmsg "otvori()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 339 322
+msg 130381 synchronous
+  from durationcanvas_ref 130125
+  to durationcanvas_ref 130253
+  yz 406 2015 msg operation_ref 136599 // "vratiSvaVozila() : Vozilo [*]"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 527 389
+msg 130893 synchronous
+  from durationcanvas_ref 130637
+  to durationcanvas_ref 130765
+  yz 459 2015 explicitmsg "create()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 725 442
+msg 131149 return
+  from durationcanvas_ref 131021
+  to durationcanvas_ref 130637
+  yz 514 2015 explicitmsg "void"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 732 497
+msg 131533 return
+  from durationcanvas_ref 131277
+  to durationcanvas_ref 131405
+  yz 593 2015 explicitmsg "vozila"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 560 576
+msg 131917 synchronous
+  from durationcanvas_ref 131661
+  to durationcanvas_ref 131789
+  yz 732 2015 msg operation_ref 136855 // "prikaziMapu()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 223 715
+msg 132429 synchronous
+  from durationcanvas_ref 132173
+  to durationcanvas_ref 132301
+  yz 915 2015 msg operation_ref 136983 // "prikaziListu()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 225 898
+msg 132941 synchronous
+  from durationcanvas_ref 132685
+  to durationcanvas_ref 132813
+  yz 1082 2015 msg operation_ref 137111 // "izaberiVozilo()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 221 1065
+msg 133325 return
+  from durationcanvas_ref 133069
+  to durationcanvas_ref 133197
+  yz 1139 2015 explicitmsg "vozilo"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 343 1122
+msg 133709 synchronous
+  from durationcanvas_ref 133453
+  to durationcanvas_ref 133581
+  yz 1254 2015 msg operation_ref 136471 // "sacuvaj()"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 119 1237
+msg 134093 synchronous
+  from durationcanvas_ref 133837
+  to durationcanvas_ref 133965
+  yz 1315 2015 msg operation_ref 136727 // "sacuvajRezervaciju(in v : Vreme, in vo : Vozilo)"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 391 1298
+msg 134477 return
+  from durationcanvas_ref 134221
+  to durationcanvas_ref 134349
+  yz 1369 2015 explicitmsg "bool"
+  show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
+  label_xy 447 1352
+end
