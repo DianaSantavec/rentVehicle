@@ -1,6 +1,6 @@
 format 224
 "Diagrams"
-  revision 10
+  revision 11
   modified_by 23 "vindo"
 
 
@@ -1733,10 +1733,10 @@ format 224
 	MysqlColumn
       end
 
-      classrelation 136703 // (extends)
-	relation 136447 ---> name "extends"
+      classrelation 136703 // ()
+	relation 136447 ---> name ""
 	  a role_name "" private
-	    classrelation_ref 136703 // (extends)
+	    classrelation_ref 136703 // ()
 	  b parent class_ref 135551 // Vozilo
       end
     end
@@ -1751,10 +1751,10 @@ format 224
       explicit_switch_type ""
       mysql_decl ""
       
-      classrelation 136575 // (extends)
-	relation 136319 ---> name "extends"
+      classrelation 136575 // ()
+	relation 136319 ---> name ""
 	  a role_name "" private
-	    classrelation_ref 136575 // (extends)
+	    classrelation_ref 136575 // ()
 	  b parent class_ref 135167 // MotornoVozilo
       end
     end
@@ -1769,10 +1769,10 @@ format 224
       explicit_switch_type ""
       mysql_decl ""
       
-      classrelation 136447 // (extends)
-	relation 136191 ---> name "extends"
+      classrelation 136447 // ()
+	relation 136191 ---> name ""
 	  a role_name "" private
-	    classrelation_ref 136447 // (extends)
+	    classrelation_ref 136447 // ()
 	  b parent class_ref 135167 // MotornoVozilo
       end
     end
@@ -1862,10 +1862,10 @@ format 224
 	MysqlColumn
       end
 
-      classrelation 136319 // (extends)
-	relation 136063 ---> name "extends"
+      classrelation 136319 // ()
+	relation 136063 ---> name ""
 	  a role_name "" private
-	    classrelation_ref 136319 // (extends)
+	    classrelation_ref 136319 // ()
 	  b parent class_ref 135551 // Vozilo
       end
     end
@@ -1913,10 +1913,10 @@ format 224
 	MysqlColumn
       end
 
-      classrelation 136191 // (extends)
-	relation 135935 ---> name "extends"
+      classrelation 136191 // ()
+	relation 135935 ---> name ""
 	  a role_name "" private
-	    classrelation_ref 136191 // (extends)
+	    classrelation_ref 136191 // ()
 	  b parent class_ref 135551 // Vozilo
       end
     end
@@ -1942,10 +1942,10 @@ format 224
 	MysqlColumn
       end
 
-      classrelation 134911 // (extends)
-	relation 134911 ---> name "extends"
+      classrelation 134911 // ()
+	relation 134911 ---> name ""
 	  a role_name "" private
-	    classrelation_ref 134911 // (extends)
+	    classrelation_ref 134911 // ()
 	  b parent class_ref 136063 // GeneralData
       end
 
@@ -2052,10 +2052,10 @@ format 224
 	MysqlColumn
       end
 
-      classrelation 135039 // (extends)
-	relation 135039 ---> name "extends"
+      classrelation 135039 // ()
+	relation 135039 ---> name ""
 	  a role_name "" private
-	    classrelation_ref 135039 // (extends)
+	    classrelation_ref 135039 // ()
 	  b parent class_ref 136063 // GeneralData
       end
     end
@@ -2070,10 +2070,10 @@ format 224
       explicit_switch_type ""
       mysql_decl ""
       
-      classrelation 135551 // (extends)
-	relation 135551 ---> name "extends"
+      classrelation 135551 // ()
+	relation 135551 ---> name ""
 	  a role_name "" private
-	    classrelation_ref 135551 // (extends)
+	    classrelation_ref 135551 // ()
 	  b parent class_ref 136191 // Zaposlen
       end
     end
@@ -2088,10 +2088,10 @@ format 224
       explicit_switch_type ""
       mysql_decl ""
       
-      classrelation 135423 // (extends)
-	relation 135423 ---> name "extends"
+      classrelation 135423 // ()
+	relation 135423 ---> name ""
 	  a role_name "" private
-	    classrelation_ref 135423 // (extends)
+	    classrelation_ref 135423 // ()
 	  b parent class_ref 136191 // Zaposlen
       end
     end
@@ -2106,10 +2106,10 @@ format 224
       explicit_switch_type ""
       mysql_decl ""
       
-      classrelation 135295 // (extends)
-	relation 135295 ---> name "extends"
+      classrelation 135295 // ()
+	relation 135295 ---> name ""
 	  a role_name "" private
-	    classrelation_ref 135295 // (extends)
+	    classrelation_ref 135295 // ()
 	  b parent class_ref 136191 // Zaposlen
       end
     end
@@ -2124,15 +2124,15 @@ format 224
       explicit_switch_type ""
       mysql_decl ""
       
-      classrelation 135167 // (extends)
-	relation 135167 ---> name "extends"
+      classrelation 135167 // ()
+	relation 135167 ---> name ""
 	  a role_name "" private
-	    classrelation_ref 135167 // (extends)
+	    classrelation_ref 135167 // ()
 	  b parent class_ref 136191 // Zaposlen
       end
     end
 
-    class 136831 "KorisnikKontroler"
+    class 136831 "RegistracijaKontroler"
       visibility package stereotype "control"
       cpp_decl ""
       java_decl ""
@@ -2142,7 +2142,7 @@ format 224
       explicit_switch_type ""
       mysql_decl ""
       
-      operation 128127 "kreirajKorisnika"
+      operation 128127 "registrujKorisnika"
 	public explicit_return_type "bool"
 	nparams 4
 	  param in name "ime" explicit_type "string"
@@ -2200,7 +2200,7 @@ ${members}};
 	relation 134655 -_->
 	  a public
 	    classrelation_ref 134655 // <dependency>
-	  b parent class_ref 136831 // KorisnikKontroler
+	  b parent class_ref 136831 // RegistracijaKontroler
       end
     end
 
@@ -2329,7 +2329,7 @@ ${members}};
 	relation 128023 -_->
 	  a public
 	    classrelation_ref 128023 // <dependency>
-	  b parent class_ref 136831 // KorisnikKontroler
+	  b parent class_ref 136831 // RegistracijaKontroler
       end
 
       classrelation 128151 // <dependency>
@@ -2344,6 +2344,18 @@ ${members}};
 	  a public
 	    classrelation_ref 128279 // <dependency>
 	  b parent class_ref 128407 // PrikazVozila
+      end
+
+      classrelation 135447 // <association>
+	relation 135319 ----
+	  a role_name "" multiplicity "0..1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 135447 // <association>
+	  b role_name "" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 135575 // <association>
       end
     end
 
@@ -2439,6 +2451,17 @@ ${members}};
 	
 	
       end
+
+      classrelation 135575 // <association>
+	relation_ref 135319 // <association>
+      end
+
+      classrelation 143383 // <dependency>
+	relation 142871 -_->
+	  a public
+	    classrelation_ref 143383 // <dependency>
+	  b parent class_ref 128279 // VoziloKontroler
+      end
     end
 
     classdiagram 141591 "DijagramiPaketa"
@@ -2456,6 +2479,372 @@ ${members}};
       explicit_switch_type ""
       mysql_decl ""
       
+    end
+
+    class 141591 "RegistracijaForma"
+      visibility package stereotype "boundary"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl "${comment}${abstract}${local}interface ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 135319 "unesiLicnePodatke"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      classrelation 135063 // <dependency>
+	relation 135063 -_->
+	  a public
+	    classrelation_ref 135063 // <dependency>
+	  b parent class_ref 136831 // RegistracijaKontroler
+      end
+
+      operation 135447 "predajDokumenta"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 135575 "sacuvaj"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      classrelation 135191 // <association>
+	relation 135191 ----
+	  a role_name "" multiplicity "0..1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 135191 // <association>
+	  b role_name "" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 135319 // <association>
+      end
+
+      classrelation 135703 // <association>
+	relation 135447 ----
+	  a role_name "" multiplicity "0..1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 135703 // <association>
+	  b role_name "" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 135831 // <association>
+      end
+    end
+
+    class 141719 "DokumentForma"
+      visibility package stereotype "boundary"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl "${comment}${abstract}${local}interface ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 135703 "priloziLicnu"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 135831 "priloziVozacku"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      classrelation 135319 // <association>
+	relation_ref 135191 // <association>
+      end
+    end
+
+    class 141847 "LicniPForma"
+      visibility package stereotype "boundary"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl "${comment}${abstract}${local}interface ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 135959 "unesiPodatke"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      classrelation 135831 // <association>
+	relation_ref 135447 // <association>
+      end
+    end
+
+    class 141975 "RezervacijaForma"
+      visibility package stereotype "boundary"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl "${comment}${abstract}${local}interface ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 136087 "unesiVreme"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 136215 "izaberiTipVozila"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 136343 "pretrazi"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 136471 "sacuvaj"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      classrelation 135959 // <dependency>
+	relation 135575 -_->
+	  a public
+	    classrelation_ref 135959 // <dependency>
+	  b parent class_ref 135551 // Vozilo
+      end
+
+      classrelation 136087 // <dependency>
+	relation 135703 -_->
+	  a public
+	    classrelation_ref 136087 // <dependency>
+	  b parent class_ref 137087 // Iznajmljivanje
+      end
+
+      classrelation 136215 // <dependency>
+	relation 135831 -_->
+	  a public
+	    classrelation_ref 136215 // <dependency>
+	  b parent class_ref 142103 // RezervacijaKontroler
+      end
+
+      classrelation 136599 // <association>
+	relation 136215 ----
+	  a role_name "" multiplicity "0..1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 136599 // <association>
+	  b role_name "" multiplicity "1" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 136727 // <association>
+      end
+    end
+
+    class 142103 "RezervacijaKontroler"
+      visibility package 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 136599 "vratiSvaVozila"
+	public return_type class_ref 135551 // Vozilo
+	multiplicity "*"
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 136727 "sacuvajRezervaciju"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "v" explicit_type "Vreme"
+	  param in name "vo" type class_ref 135551 // Vozilo
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      classrelation 136343 // <dependency>
+	relation 135959 -_->
+	  a public
+	    classrelation_ref 136343 // <dependency>
+	  b parent class_ref 137087 // Iznajmljivanje
+      end
+
+      classrelation 136471 // <dependency>
+	relation 136087 -_->
+	  a public
+	    classrelation_ref 136471 // <dependency>
+	  b parent class_ref 135551 // Vozilo
+      end
+    end
+
+    class 142231 "IzborForma"
+      visibility package stereotype "boundary"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl "${comment}${abstract}${local}interface ${name}${inherit} {
+${members}};
+"
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      operation 136855 "prikaziMapu"
+	public explicit_return_type ""
+	nparams 0
+	
+	
+	
+	
+	
+      end
+
+      operation 136983 "prikaziListu"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 137111 "izaberiVozilo"
+	public explicit_return_type ""
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      classrelation 136727 // <association>
+	relation_ref 136215 // <association>
+      end
+
+      classrelation 136855 // <dependency>
+	relation 136343 -_->
+	  a public
+	    classrelation_ref 136855 // <dependency>
+	  b parent class_ref 142103 // RezervacijaKontroler
+      end
     end
   end
 

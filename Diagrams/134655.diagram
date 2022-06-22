@@ -2,179 +2,245 @@ format 224
 
 classcanvas 128023 class_ref 128151 // PrikazSvihVozilaSaPrijavljenimOstecenimaForma
   classdiagramsettings member_max_width 0 end
-  xyz 137.307 1333.54 2000
+  xyz 125.956 752.586 2000
 end
 classcanvas 128127 class_ref 135167 // MotornoVozilo
   classdiagramsettings member_max_width 0 end
-  xyz 196.294 102.425 2000
+  xyz 191.972 67.0819 2000
 end
 classcanvas 128255 class_ref 135295 // Automobil
   classdiagramsettings member_max_width 0 end
-  xyz 557.155 30.4107 2000
+  xyz 62.9474 81.4704 2000
 end
 classcanvas 128279 class_ref 128279 // VoziloKontroler
   classdiagramsettings member_max_width 0 end
-  xyz 568.302 1142.73 2000
+  xyz 396.716 607.146 2000
 end
 classcanvas 128383 class_ref 135423 // Motor
   classdiagramsettings member_max_width 0 end
-  xyz 612.035 153.871 2000
+  xyz 67.9229 177.223 2000
 end
 classcanvas 128511 class_ref 135551 // Vozilo
   classdiagramsettings member_max_width 0 end
-  xyz 578.771 317.91 2000
+  xyz 381.692 71.9833 2000
 end
 classcanvas 128535 class_ref 128407 // PrikazVozila
   classdiagramsettings member_max_width 0 end
-  xyz 636.88 1424.82 2000
+  xyz 523.022 759.793 2000
 end
 classcanvas 128639 class_ref 135679 // Biciklo
   classdiagramsettings member_max_width 0 end
-  xyz 1147.49 204.45 2000
+  xyz 677.933 46.8445 2000
 end
 classcanvas 128767 class_ref 135807 // ElektricniTrotinet
   classdiagramsettings member_max_width 0 end
-  xyz 1148.66 375.875 2000
+  xyz 719.118 144.77 2000
 end
 classcanvas 128895 class_ref 135935 // KorisnikKlasa
   classdiagramsettings member_max_width 0 end
-  xyz 1122.18 610.589 2000
+  xyz 723.184 378.177 2000
 end
 classcanvas 129023 class_ref 136063 // GeneralData
   classdiagramsettings member_max_width 0 end
-  xyz 842.92 794.557 2000
+  xyz 519.616 456.132 2000
+end
+classcanvas 129047 class_ref 141591 // RegistracijaForma
+  classdiagramsettings member_max_width 0 end
+  xyz 367.838 991.139 2000
 end
 classcanvas 129151 class_ref 136191 // Zaposlen
   classdiagramsettings member_max_width 0 end
-  xyz 209.017 767.954 2000
+  xyz 195.46 438.455 2000
 end
 classcanvas 129279 class_ref 136319 // VozacKlasa
   classdiagramsettings member_max_width 0 end
-  xyz 42.8087 938.619 2000
+  xyz 70.6122 448.61 2000
 end
 classcanvas 129407 class_ref 136447 // TehnickaPodrskaKlasa
   classdiagramsettings member_max_width 0 end
-  xyz 64.5809 1024.7 2000
+  xyz 58.6825 561.04 2000
 end
 classcanvas 129535 class_ref 136575 // AdministratorKlasa
   classdiagramsettings member_max_width 0 end
-  xyz 277.512 987.331 2000
+  xyz 142.549 672.158 2000
 end
 classcanvas 129663 class_ref 136703 // ServiserKlasa
   classdiagramsettings member_max_width 0 end
-  xyz 460.876 1024.7 2000
+  xyz 287.51 605.453 2000
 end
-classcanvas 129791 class_ref 136831 // KorisnikKontroler
+classcanvas 129687 class_ref 141719 // DokumentForma
   classdiagramsettings member_max_width 0 end
-  xyz 910.347 1020.57 2000
+  xyz 636.121 992.787 2000
 end
-classcanvas 129919 class_ref 136959 // LoginRegisterForma
+classcanvas 129791 class_ref 136831 // RegistracijaKontroler
   classdiagramsettings member_max_width 0 end
-  xyz 1079.94 1389.78 2000
+  xyz 135.049 893.819 2000
+end
+classcanvas 130071 class_ref 141847 // LicniPForma
+  classdiagramsettings member_max_width 0 end
+  xyz 137.204 1001.36 2000
+end
+classcanvas 130583 class_ref 141975 // RezervacijaForma
+  classdiagramsettings member_max_width 0 end
+  xyz 797.074 468.064 2000
+end
+classcanvas 130711 class_ref 142103 // RezervacijaKontroler
+  classdiagramsettings member_max_width 0 end
+  xyz 754.995 284.048 2000
 end
 classcanvas 131199 class_ref 137087 // Iznajmljivanje
   classdiagramsettings member_max_width 0 end
-  xyz 784.533 606.373 2000
+  xyz 272.272 235.976 2000
 end
 classcanvas 131455 class_ref 137215 // Ostecenje
   classdiagramsettings member_max_width 0 end
-  xyz 281.006 493.913 2000
+  xyz 96.5174 292.007 2000
+end
+classcanvas 131735 class_ref 142231 // IzborForma
+  classdiagramsettings member_max_width 0 end
+  xyz 987.491 386.552 2005
 end
 relationcanvas 128407 relation_ref 128151 // <dependency>
   from ref 128023 z 2001 to ref 128279
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 128663 relation_ref 128279 // <dependency>
-  from ref 128023 z 2001 to ref 128535
-  no_role_a no_role_b
-  no_multiplicity_a no_multiplicity_b
-end
 relationcanvas 128791 relation_ref 128407 // <dependency>
+  decenter_begin 180
   from ref 128279 z 2001 to ref 131455
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 128919 relation_ref 128535 // <dependency>
+  decenter_begin 238
   from ref 128279 z 2001 to ref 128511
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 130047 relation_ref 134655 // <dependency>
-  from ref 129919 z 2001 to ref 129791
+relationcanvas 129559 relation_ref 135063 // <dependency>
+  from ref 129047 z 2001 to ref 129791
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129815 relation_ref 135191 // <association>
+  from ref 129047 z 2001 to ref 129687
+  no_role_a no_role_b
+  multiplicity_a_pos 598 1042 3000 multiplicity_b_pos 520 1046 3000
+end
+relationcanvas 129943 relation_ref 135319 // <association>
+  from ref 128023 z 2001 to ref 128535
+  no_role_a no_role_b
+  multiplicity_a_pos 491 800 3000 multiplicity_b_pos 428 801 3000
 end
 relationcanvas 130175 relation_ref 134783 // <dependency>
-  from ref 129791 z 2001 to ref 128895
+  decenter_end 296
+  from ref 129791 z 2001 to point 765.537 841.379
+  line 132375 z 2001 to ref 128895
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 130303 relation_ref 134911 // extends
-  from ref 128895 z 2001 label "extends" italic max_width 255 xyz 1064 715 2001 to ref 129023
+relationcanvas 130199 relation_ref 135447 // <association>
+  from ref 129047 z 2001 to ref 130071
+  no_role_a no_role_b
+  multiplicity_a_pos 257 1043 3000 multiplicity_b_pos 348 1046 3000
+end
+relationcanvas 130303 relation_ref 134911 // 
+  from ref 128895 z 2001 to ref 129023
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 130431 relation_ref 135039 // extends
-  from ref 129151 z 2001 label "extends" italic max_width 255 xyz 566.5 814.5 2001 to ref 129023
+relationcanvas 130431 relation_ref 135039 // 
+  from ref 129151 z 2001 to ref 129023
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 130559 relation_ref 135167 // extends
-  from ref 129663 z 2001 label "extends" italic max_width 255 xyz 375 923 2001 to ref 129151
+relationcanvas 130559 relation_ref 135167 // 
+  from ref 129663 z 2001 to ref 129151
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 130687 relation_ref 135295 // extends
-  from ref 129535 z 2001 label "extends" italic max_width 255 xyz 282 902 2001 to ref 129151
+relationcanvas 130687 relation_ref 135295 // 
+  from ref 129535 z 2001 to ref 129151
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 130815 relation_ref 135423 // extends
-  from ref 129407 z 2001 label "extends" italic max_width 255 xyz 176 942.5 2001 to ref 129151
+relationcanvas 130815 relation_ref 135423 // 
+  from ref 129407 z 2001 to ref 129151
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 130943 relation_ref 135551 // extends
-  from ref 129279 z 2001 label "extends" italic max_width 255 xyz 143 877.5 2001 to ref 129151
+relationcanvas 130943 relation_ref 135551 // 
+  from ref 129279 z 2001 to ref 129151
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 131071 relation_ref 135679 // <association>
   from ref 128511 z 2001 to ref 128895
   no_role_a no_role_b
-  multiplicity_a_pos 1124 622 3000 multiplicity_b_pos 814 447 3000
+  multiplicity_a_pos 750 396 3000 multiplicity_b_pos 542 186 3000
+end
+relationcanvas 131223 relation_ref 135831 // <dependency>
+  from ref 130583 z 2001 to point 909 435
+  line 132759 z 2001 to ref 130711
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 131351 relation_ref 135959 // <dependency>
+  from ref 130711 z 2001 to ref 131199
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 131479 relation_ref 136087 // <dependency>
+  from ref 130711 z 2001 to point 721 272
+  line 132631 z 2001 to ref 128511
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
 end
 relationcanvas 131583 relation_ref 135807 // <association>
   from ref 131455 z 2001 to ref 131199
   no_role_a no_role_b
-  multiplicity_a_pos 767 652 3000 multiplicity_b_pos 393 563 3000
+  multiplicity_a_pos 256 309 3000 multiplicity_b_pos 196 328 3000
 end
-relationcanvas 131711 relation_ref 135935 // extends
-  from ref 128767 z 2001 label "extends" italic max_width 255 xyz 935 378 2001 to ref 128511
+relationcanvas 131711 relation_ref 135935 // 
+  from ref 128767 z 2001 to ref 128511
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 131839 relation_ref 136063 // extends
-  from ref 128639 z 2001 label "extends" italic max_width 255 xyz 935 286 2001 to ref 128511
+relationcanvas 131839 relation_ref 136063 // 
+  from ref 128639 z 2001 to ref 128511
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 131967 relation_ref 136191 // extends
-  from ref 128383 z 2001 label "extends" italic max_width 255 xyz 454 158 2001 to ref 128127
+relationcanvas 131863 relation_ref 136215 // <association>
+  from ref 130583 z 2006 to ref 131735
+  no_role_a no_role_b
+  multiplicity_a_pos 949 463 3000 multiplicity_b_pos 932 495 3000
+end
+relationcanvas 131967 relation_ref 136191 // 
+  from ref 128383 z 2001 to ref 128127
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 132095 relation_ref 136319 // extends
-  from ref 128255 z 2001 label "extends" italic max_width 255 xyz 427 89 2001 to ref 128127
+relationcanvas 131991 relation_ref 136343 // <dependency>
+  from ref 131735 z 2006 to ref 130711
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
-relationcanvas 132223 relation_ref 136447 // extends
-  from ref 128127 z 2001 label "extends" italic max_width 255 xyz 439 244 2001 to ref 128511
+relationcanvas 132095 relation_ref 136319 // 
+  from ref 128255 z 2001 to ref 128127
   no_role_a no_role_b
   no_multiplicity_a no_multiplicity_b
 end
-line 131327 -_-_
+relationcanvas 132119 relation_ref 142871 // <dependency>
+  from ref 128535 z 2001 to ref 128279
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 132223 relation_ref 136447 // 
+  from ref 128127 z 2001 to ref 128511
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+line 131327 -_-_ decenter_begin 722 decenter_end 550
   from ref 131199 z 2002 to ref 131071
 end

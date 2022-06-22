@@ -1,146 +1,146 @@
 format 224
 
 classinstance 128023 class_ref 128535 // Serviser
-  drawing_mode actor  name ""   xyz 33.3018 10.2075 2005 life_line_z 2000
+  drawing_mode actor  name ""   xyz 33.3602 10.8399 2005 life_line_z 2000
 classinstance 128151 class_ref 128151 // PrikazSvihVozilaSaPrijavljenimOstecenimaForma
-  name ""   xyz 98.0217 15.8729 2010 life_line_z 2000
+  name ""   xyz 98.8928 15.6368 2010 life_line_z 2000
 classinstance 128279 class_ref 128407 // PrikazVozila
-  name ""   xyz 447.01 15.8215 2005 life_line_z 2000
+  name ""   xyz 447.514 15.5854 2005 life_line_z 2000
 classinstance 128407 class_ref 128279 // VoziloKontroler
-  name ""   xyz 604.762 16.7379 2005 life_line_z 2000
+  name ""   xyz 604.002 16.3702 2005 life_line_z 2000
 classinstance 129303 class_ref 135551 // Vozilo
-  name ""   xyz 828.32 107.181 2005 life_line_z 2000
+  name ""   xyz 828.972 107.838 2005 life_line_z 2000
 classinstance 133271 class_ref 137215 // Ostecenje
-  name ""   xyz 952.858 121.261 2005 life_line_z 2000
+  name ""   xyz 952.119 121.076 2005 life_line_z 2000
 fragment 136855 "loop"
   refer sequencediagram_ref 135063 // PregledOstecenihVozila
-  form "imaJosVozilaSaPrijavljenimOstecenjima" xyzwh 13.2455 386.501 2000 1044 974
+  form "imaJosVozilaSaPrijavljenimOstecenjima" xyzwh 12.9773 386.624 2000 1044 974
 end
 durationcanvas 128535 classinstance_ref 128023 // :Serviser
-  xyzwh 59 113.512 2010 11 44
+  xyzwh 53 113.7 2010 11 44
 end
 durationcanvas 128663 classinstance_ref 128151 // :PrikazSvihVozilaSaPrijavljenimOstecenimaForma
-  xyzwh 266 113.931 2010 11 29
+  xyzwh 235 113.34 2010 11 29
 end
 durationcanvas 128919 classinstance_ref 128151 // :PrikazSvihVozilaSaPrijavljenimOstecenimaForma
-  xyzwh 266 165.95 2010 11 44
+  xyzwh 235 165.12 2010 11 44
 end
 durationcanvas 129047 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 656 166.261 2010 11 29
+  xyzwh 647 166.6 2010 11 29
 end
 durationcanvas 129431 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 656 208.335 2010 11 44
+  xyzwh 647 208.18 2010 11 44
 end
 durationcanvas 129559 classinstance_ref 129303 // :Vozilo
-  xyzwh 850 207.507 2010 11 29
+  xyzwh 847 207.82 2010 11 29
 end
 durationcanvas 129815 classinstance_ref 129303 // :Vozilo
-  xyzwh 850 275.553 2010 11 44
+  xyzwh 847 275.32 2010 11 44
 end
 durationcanvas 129943 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 656 277.193 2010 11 30
+  xyzwh 647 277.22 2010 11 29
 end
 durationcanvas 130199 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 656 328.394 2010 11 46
+  xyzwh 647 328 2010 11 46
 end
 durationcanvas 130327 classinstance_ref 128151 // :PrikazSvihVozilaSaPrijavljenimOstecenimaForma
-  xyzwh 265 330.294 2010 11 31
+  xyzwh 235 330.9 2010 11 31
 end
 durationcanvas 130583 classinstance_ref 128023 // :Serviser
-  xyzwh 60 452.167 2010 11 44
+  xyzwh 53 451.66 2010 11 44
 end
 durationcanvas 130711 classinstance_ref 128151 // :PrikazSvihVozilaSaPrijavljenimOstecenimaForma
-  xyzwh 265 450.741 2010 11 29
+  xyzwh 235 450.88 2010 11 29
 end
 durationcanvas 130967 classinstance_ref 128151 // :PrikazSvihVozilaSaPrijavljenimOstecenimaForma
-  xyzwh 266 508.51 2010 11 44
+  xyzwh 235 508.6 2010 11 44
 end
 durationcanvas 131095 classinstance_ref 128279 // :PrikazVozila
-  xyzwh 490 508.626 2010 11 31
+  xyzwh 481 508.66 2010 11 31
 end
 durationcanvas 131351 classinstance_ref 128279 // :PrikazVozila
-  xyzwh 490 559.356 2010 11 44
+  xyzwh 481 558.6 2010 11 44
 end
 durationcanvas 131479 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 656 558.787 2010 11 31
+  xyzwh 647 558.66 2010 11 31
 end
 durationcanvas 131735 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 656 598.078 2010 11 46
+  xyzwh 647 598.4 2010 11 46
 end
 durationcanvas 131863 classinstance_ref 129303 // :Vozilo
-  xyzwh 850 596.14 2010 11 31
+  xyzwh 847 596.62 2010 11 31
 end
 durationcanvas 132119 classinstance_ref 129303 // :Vozilo
-  xyzwh 850 660.983 2010 11 44
+  xyzwh 847 660.02 2010 11 44
 end
 durationcanvas 132247 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 656 658.556 2010 11 31
+  xyzwh 647 658.66 2010 11 31
 end
 durationcanvas 132503 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 656 717.982 2010 11 44
+  xyzwh 647 718.38 2010 11 44
 end
 durationcanvas 132631 classinstance_ref 128279 // :PrikazVozila
-  xyzwh 490 716.535 2010 11 32
+  xyzwh 481 716.02 2010 11 32
 end
 durationcanvas 132887 classinstance_ref 128279 // :PrikazVozila
-  xyzwh 490 773.251 2010 11 48
+  xyzwh 481 773.32 2010 11 48
 end
 durationcanvas 133015 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 656 772.676 2010 11 31
+  xyzwh 647 772.54 2010 11 31
 end
 durationcanvas 133399 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 656 824.325 2010 11 44
+  xyzwh 647 823.9 2010 11 44
 end
 durationcanvas 133527 classinstance_ref 133271 // :Ostecenje
-  xyzwh 988 823.865 2010 11 29
+  xyzwh 982 823.54 2010 11 29
 end
 durationcanvas 133783 classinstance_ref 133271 // :Ostecenje
-  xyzwh 988 886.145 2010 11 46
+  xyzwh 982 886.36 2010 11 46
 end
 durationcanvas 133911 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 656 883.952 2010 11 31
+  xyzwh 647 883.16 2010 11 31
 end
 durationcanvas 134167 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 656 939.795 2010 11 44
+  xyzwh 647 939.2 2010 11 44
 end
 durationcanvas 134295 classinstance_ref 128279 // :PrikazVozila
-  xyzwh 490 939.985 2010 11 31
+  xyzwh 481 939.68 2010 11 31
 end
 durationcanvas 134551 classinstance_ref 128023 // :Serviser
-  xyzwh 59 1002.99 2010 11 45
+  xyzwh 53 1002.08 2010 11 45
 end
 durationcanvas 134679 classinstance_ref 128279 // :PrikazVozila
-  xyzwh 490 1003.63 2010 11 31
+  xyzwh 481 1003.56 2010 11 31
 end
 durationcanvas 134935 classinstance_ref 128279 // :PrikazVozila
-  xyzwh 490 1050.03 2010 11 44
+  xyzwh 481 1049.82 2010 11 44
 end
 durationcanvas 135063 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 656 1047.61 2010 11 31
+  xyzwh 647 1047.04 2010 11 31
 end
 durationcanvas 135319 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 656 1100.34 2010 11 44
+  xyzwh 647 1099.82 2010 11 44
 end
 durationcanvas 135447 classinstance_ref 129303 // :Vozilo
-  xyzwh 850 1098.44 2010 11 31
+  xyzwh 847 1098.46 2010 11 31
 end
 durationcanvas 135703 classinstance_ref 129303 // :Vozilo
-  xyzwh 850 1165.47 2010 11 46
+  xyzwh 847 1164.12 2010 11 46
 end
 durationcanvas 135831 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 656 1164.31 2010 11 31
+  xyzwh 647 1164.18 2010 11 31
 end
 durationcanvas 136087 classinstance_ref 128407 // :VoziloKontroler
-  xyzwh 656 1219.46 2010 11 46
+  xyzwh 647 1217.8 2010 11 46
 end
 durationcanvas 136215 classinstance_ref 128279 // :PrikazVozila
-  xyzwh 490 1216.1 2010 11 33
+  xyzwh 481 1216.44 2010 11 33
 end
 durationcanvas 136471 classinstance_ref 128279 // :PrikazVozila
-  xyzwh 490 1282.57 2010 11 61
+  xyzwh 481 1282.04 2010 11 61
 end
 durationcanvas 136599 classinstance_ref 128151 // :PrikazSvihVozilaSaPrijavljenimOstecenimaForma
-  xyzwh 266 1282.82 2010 11 29
+  xyzwh 235 1282.32 2010 11 29
 end
 msg 128791 synchronous
   from durationcanvas_ref 128535
@@ -213,7 +213,7 @@ msg 133143 synchronous
   to durationcanvas_ref 133015
   yz 777 2015 msg operation_ref 128535 // "vratiNeresenaOstecenjaVozila(in idVozila : int) : Ostecenje [*]"
   show_full_operations_definition default show_class_of_operation default drawing_language default show_context_mode default
-  label_xy 437 757
+  label_xy 465 752
 msg 133655 synchronous
   from durationcanvas_ref 133399
   to durationcanvas_ref 133527
